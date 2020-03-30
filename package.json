@@ -1,8 +1,8 @@
 {
-  "name": "boo",
+  "name": "kushul",
   "version": "1.0.0",
-  "description": "A starter theme for headless Ghost CMS",
-  "author": "Sandeep Ramgolam",
+  "description": "Kushul Soomaree personal webiste",
+  "author": "Kushul Soomaree",
   "private": true,
   "scripts": {
     "dev": "nuxt --port 3000",
@@ -20,18 +20,20 @@
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^1.0.0",
-    "eslint-config-prettier": "^4.1.0",
-    "eslint-plugin-prettier": "^3.0.1",
-    "prettier": "^1.16.4",
     "@vue/test-utils": "^1.0.0-beta.27",
     "babel-jest": "^24.1.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "jest": "^24.1.0",
+    "node-sass": "^4.13.1",
     "nuxt-purgecss": "^0.2.1",
     "postcss-color-function": "^4.1.0",
     "postcss-hexrgba": "^1.0.2",
     "postcss-nested": "^4.2.1",
     "postcss-responsive-type": "^1.0.0",
     "postcss-url": "^8.0.0",
-    "jest": "^24.1.0",
+    "prettier": "^1.16.4",
+    "sass-loader": "^8.0.2",
     "vue-jest": "^4.0.0-0"
   }
 }

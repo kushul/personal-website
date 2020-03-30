@@ -1,0 +1,42 @@
+//responsive
+$desktop: 1300px;
+$tablet: 1024px;
+$tablet-portrait: 768px;
+$mobile: 480px;
+
+:root {
+     /* Colours */
+  --blue: #3eb0ef;
+  --green: #00a672;
+  --purple: #ad26b4;
+  --yellow: #fecd35;
+  --red: #f05230;
+  --darkgrey: #091a28;
+  --midgrey: #738a94;
+  --lightgrey: #c5d2d9;
+  --whitegrey: #e5eff5;
+  --pink: #fa3a57;
+  --brown: #a3821a;
+  --dark-bg: #020b1a;
+  --darkmode: var(--darkgrey);
+  --darkmode-lighter: var(--midgrey);
+  
+    //Layout
+    --gutter: 15px;
+  
+    //fonts
+    --font-roboto: "Roboto", sans-serif;
+  
+    --font-nunito: "Nunito", sans-serif;
+    --font-source_sans_pro: "Source Sans Pro", sans-serif;
+  
+    --header-height: 250px;
+  }
+
+[theme="dark"] {
+    --color-primary: red;
+}
+
+[theme="sepia"] {
+    --color-primary: green;
+}
