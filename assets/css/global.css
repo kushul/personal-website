@@ -43,3 +43,7 @@ a {
 /* html.mode-dark {
   --midgrey: var(--red);
 } */
+
+.content-wrapper {
+  transition: background-color .25s;
+}

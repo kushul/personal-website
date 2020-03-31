@@ -33,10 +33,27 @@ $mobile: 480px;
     --header-height: 250px;
   }
 
-[theme="dark"] {
-    --color-primary: red;
-}
 
-[theme="sepia"] {
-    --color-primary: green;
-}
+  .theme-light {
+
+    // background
+    --bg-background-primary: #f7fafc;
+    --bg-background-secondary: #f7fafc;
+
+    // text
+    --text-copy-primary: #000;
+  }
+
+  .theme-dark {
+    --bg-background-primary: #102C44;
+    --bg-background-secondary: #102C44;
+
+    --text-copy-primary: #fff;
+  }
+
+  .theme-sepia {
+    --bg-background-primary: #f1e7d0;
+    --bg-background-secondary: #f1e7d0;
+
+    --text-copy-primary: #433422;
+  }

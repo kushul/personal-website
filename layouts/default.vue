@@ -1,7 +1,10 @@
 <template>
-  <div class="flex min-h-screen flex-col">
-    <menu-section></menu-section>
-    <input type="checkbox" class="theme-switch" v-model="darkmode" />
+  <div
+    class="flex min-h-screen flex-col bg-background-secondary text-copy-primary content-wrapper"
+    :class="theme"
+  >
+    <menu-section :theme="theme" @update-theme="updateTheme" @local-theme="storeTheme"></menu-section>
+    <!-- <input type="checkbox" class="theme-switch" v-model="darkmode" /> -->
     <nuxt class="flex-grow" />
     <footer-section />
   </div>
@@ -16,18 +19,20 @@ export default {
   computed: {
     darkmode: {
       get: function() {
-        return this.$store.getters['getDarkMode']
+        // return this.$store.getters['getDarkMode']
       },
       set: function(value) {
-        this.$store.dispatch('setDarkMode', value)
+        // this.$store.dispatch('setDarkMode', value)
       }
     }
   },
   mounted() {
-    this.$store.dispatch('checkDarkMode')
+    // this.$store.dispatch('checkDarkMode')s
   },
   data() {
-    return {}
+    return {
+      theme: 'theme-light'
+    }
   },
   components: {
     MenuSection,
@@ -35,6 +40,17 @@ export default {
   },
   created() {
     this.$store.dispatch('initGhost')
+  },
+  methods: {
+    updateTheme(val) {
+      this.theme = val
+    },
+    storeTheme(val) {
+      this.theme = val
+    }
+  },
+  craeted() {
+    this.storeTheme()
   }
 }
 </script>

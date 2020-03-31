@@ -1445,7 +1445,7 @@ Usage (In Ghost editor):
   :is(:not('.mode-dark')) {
     body {
       color: rgba(255, 255, 255, 0.75);
-      background: var(--darkmode);
+      /* background: var(--darkmode); */
     }
 
     img {
@@ -1680,8 +1680,7 @@ Usage (In Ghost editor):
 
 .mode-dark {
   body {
-    color: rgba(255, 255, 255, 0.75);
-    background: var(--darkmode);
+    /* background: var(--darkmode); */
     /* transition: all 0.4s linear; */
   }
 
