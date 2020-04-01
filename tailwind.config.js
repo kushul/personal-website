@@ -8,13 +8,8 @@ module.exports = {
   theme: {
     colors: {
       background: {
-        // 'primary': 'white',
-        // 'secondary': '#f7fafc',
-        // 'primary': 'black',
-        // 'secondary': '#102C44',
         'primary': 'var(--bg-background-primary)',
         'secondary': 'var(--bg-background-secondary)',
-
       },
       copy: {
         'primary': 'var(--text-copy-primary)',
