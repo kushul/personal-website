@@ -6,6 +6,9 @@
 */
 module.exports = {
   theme: {
+    fontFamily: {
+      display: ['Nunito', 'sans-serif'],
+    },
     colors: {
       background: {
         'primary': 'var(--bg-background-primary)',
