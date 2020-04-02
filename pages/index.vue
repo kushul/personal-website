@@ -1,25 +1,24 @@
 <template>
-  <div class="container mx-auto items-center flex justify-center">
-    <div>
-      <div class="flex justify-center text-center md:text-right">
-        <!-- <h1 class="text-4xl">What's boo?</h1> -->
-        <!-- <h2
-          class="tracking-tight font-serif text-gray-700 text-3xl md:text-5xl"
-        >A free and open source theme for headless Ghost CMS</h2>
-        <p class="text-xl md:text-2xl text-gray-500 mt-5">Built with NuxtJS & TailwindCSS</p>-->
-        <!-- <div class="mt-5">
-          <nuxt-link :to="{path: '/blog'}" class="button">View posts</nuxt-link>
-        </div>-->
-      </div>
-      <div class="main-image-wrapper relative flex items-center justify-center h-64 md:w-64">
-        <img
-          class="h-64 md:w-64 mx-auto rounded-full object-cover"
-          src="~/assets/images/kushul_cartoon.jpg"
-          alt
-        />
-        <div class="works__pulse-bg"></div>
-        <div class="works__pulse-bg"></div>
-      </div>
+  <div class="container mx-auto main-home-container">
+    <div
+      class="tagline-wrapper"
+      v-bind:style="{ 'grid-area': tagline.gridarea }"
+      v-for="(tagline, index) in taglines"
+      :key="index"
+    >
+      <h2
+        class="tracking-tight font-serif text-copy-primary text-3xl md:text-5xl text-fade"
+      >{{tagline.text}}</h2>
+      <img class="image-fade" :src="findImage(tagline.image)" alt="creative" />
+    </div>
+    <div class="main-image-wrapper relative flex items-center justify-center">
+      <img
+        class="h-64 md:w-64 mx-auto rounded-full object-cover"
+        src="~/assets/images/kushul_cartoon.jpg"
+        alt
+      />
+      <div class="works__pulse-bg"></div>
+      <div class="works__pulse-bg"></div>
     </div>
   </div>
 </template>
@@ -49,10 +48,63 @@ export default {
       indexPagination: posts.meta.pagination
     }
   },
+  data() {
+    return {
+      taglines: [
+        {
+          text: 'Creative',
+          image: 'creative.svg',
+          gridarea: 'a'
+        },
+        {
+          text: 'Creative',
+          image: 'creative.svg',
+          gridarea: 'b'
+        },
+        {
+          text: 'Creative',
+          image: 'creative.svg',
+          gridarea: 'c'
+        },
+        {
+          text: 'Creative',
+          image: 'creative.svg',
+          gridarea: 'd'
+        },
+        {
+          text: 'Creative',
+          image: 'creative.svg',
+          gridarea: 'f'
+        },
+        {
+          text: 'Creative',
+          image: 'creative.svg',
+          gridarea: 'h'
+        },
+        {
+          text: 'Creative',
+          image: 'creative.svg',
+          gridarea: 'i'
+        },
+        {
+          text: 'Creative',
+          image: 'creative.svg',
+          gridarea: 'j'
+        }
+      ]
+    }
+  },
   components: {
     PostList
   },
-  methods: {}
+  methods: {
+    findImage(name) {
+      if (name) {
+        const result = require(`~/assets/images/${name}`)
+        return result
+      }
+    }
+  }
 }
 </script>
 
@@ -63,8 +115,31 @@ export default {
 }
 */
 
+.main-home-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  grid-template-areas: 'a b c' 'd e f' 'h i j';
+}
+
+.tagline-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-fade {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
 .main-image-wrapper {
   animation: bounce 2s infinite;
+  grid-area: e;
 }
 
 .works__pulse-bg {
