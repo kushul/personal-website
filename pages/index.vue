@@ -2,7 +2,7 @@
   <div class="container mx-auto main-home-container">
     <div
       class="tagline-wrapper"
-      v-bind:style="{ 'grid-area': tagline.gridarea }"
+      v-bind:style="{ 'grid-area': tagline.gridarea, 'justify-content': tagline.justify, 'align-items': tagline.align }"
       v-for="(tagline, index) in taglines"
       :key="index"
     >
@@ -11,19 +11,12 @@
       >{{tagline.text}}</h2>
       <img class="image-fade" :src="findImage(tagline.image)" alt="creative" />
     </div>
-    <div class="main-image-wrapper relative flex items-center justify-center">
-      <img
-        class="h-64 md:w-64 mx-auto rounded-full object-cover"
-        src="~/assets/images/kushul_cartoon.jpg"
-        alt
-      />
-      <div class="works__pulse-bg"></div>
-      <div class="works__pulse-bg"></div>
-    </div>
+    <Main-image />
   </div>
 </template>
 <script>
 import { ghost, postsPerPage, postIndexFields } from '../api/ghost'
+import MainImage from '../components/home-main-tagline.vue'
 
 import PostList from '../components/PostList'
 export default {
@@ -54,48 +47,65 @@ export default {
         {
           text: 'Creative',
           image: 'creative.svg',
-          gridarea: 'a'
+          gridarea: 'a',
+          justify: 'flex-end',
+          align: 'flex-end'
         },
         {
           text: 'Creative',
           image: 'creative.svg',
-          gridarea: 'b'
+          gridarea: 'b',
+          justify: 'center',
+          align: 'flex-end'
         },
         {
           text: 'Creative',
           image: 'creative.svg',
-          gridarea: 'c'
+          gridarea: 'c',
+          justify: 'flex-start',
+          align: 'flex-end'
         },
         {
           text: 'Creative',
           image: 'creative.svg',
-          gridarea: 'd'
+          gridarea: 'd',
+          justify: 'flex-end',
+          align: 'center'
         },
         {
           text: 'Creative',
           image: 'creative.svg',
-          gridarea: 'f'
+          gridarea: 'f',
+          justify: 'flex-start',
+          align: 'center'
         },
         {
           text: 'Creative',
           image: 'creative.svg',
-          gridarea: 'h'
+          gridarea: 'h',
+          justify: 'flex-end',
+          align: 'flex-start'
         },
         {
           text: 'Creative',
           image: 'creative.svg',
-          gridarea: 'i'
+          gridarea: 'i',
+          justify: 'center',
+          align: 'flex-start'
         },
         {
           text: 'Creative',
           image: 'creative.svg',
-          gridarea: 'j'
+          gridarea: 'j',
+          justify: 'flex-start',
+          align: 'flex-start'
         }
       ]
     }
   },
   components: {
-    PostList
+    PostList,
+    MainImage
   },
   methods: {
     findImage(name) {
@@ -118,9 +128,11 @@ export default {
 .main-home-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-gap: 10px;
+  grid-template-rows: 0.5fr 1fr 0.5fr;
+  grid-gap: 60px;
   grid-template-areas: 'a b c' 'd e f' 'h i j';
+
+  @apply mt-8;
 }
 
 .tagline-wrapper {
@@ -128,37 +140,12 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 10;
 }
 
 .text-fade {
-  position: absolute;
-  display: flex;
-  align-items: center;
   height: 100%;
-}
-
-.main-image-wrapper {
-  animation: bounce 2s infinite;
-  grid-area: e;
-}
-
-.works__pulse-bg {
-  animation: pulse 2s infinite;
-  width: 150px;
-  height: 150px;
   position: absolute;
-  border-radius: 100%;
-  opacity: 0.8;
-  z-index: -1;
-
-  @apply border-solid border-green-600 border-2;
-}
-
-.works__pulse-bg + .works__pulse-bg {
-  width: 140px;
-  height: 140px;
-  -webkit-animation-delay: 0.3s;
-  animation-delay: 0.3s;
 }
 
 .title {

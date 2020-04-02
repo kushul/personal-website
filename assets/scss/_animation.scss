@@ -10,3 +10,8 @@
         transform:scale(1);
     } 
         }
+
+
+@keyframes moveInOutY{0%{transform:translateY(-10px)}to{transform:translateY(5px)}}
+@keyframes moveInOutX{0%{transform:translateX(-10px)}to{transform:translateX(5px)}}
+@keyframes moveInOutZ{0%{transform:translateZ(-10px)}to{transform:translateZ(5px)}}

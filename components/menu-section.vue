@@ -1,7 +1,7 @@
 
 <template>
   <div
-    class="main-menu container mx-auto font-bold md:flex justify-center md:justify-between items-center py-3 md:py-10"
+    class="main-menu container mx-auto font-bold md:flex justify-center md:justify-between py-8 items-center py-3"
   >
     <nuxt-link class="text-center block md:text-left text-3xl logo-wrapper" :to="{name: 'index'}">
       <svg
