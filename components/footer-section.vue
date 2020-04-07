@@ -51,10 +51,10 @@ export default {
 }
 
 .footer-item {
-  @apply mx-4 font-bold text-copy-invert;
+  @apply mx-4 font-bold;
 
   a {
-    @apply border-b-2 border-gray-800;
+    @apply border-b-2 border-gray-800 text-copy-invert;
   }
 }
 </style>
