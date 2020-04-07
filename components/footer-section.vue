@@ -1,15 +1,18 @@
 <template>
-  <div class="container bg-white flex justify-between mx-auto text-sm py-5 tracking-wide">
-    <nuxt-link :to="{name: 'settings'}" class="md:text-right text-xs tracking-widest">
-      <div class="text-gray-600">source: {{ url }}</div>
-    </nuxt-link>
+  <div
+    class="container bg-background-invert text-copy-invert flex justify-center items-center mx-auto text-sm py-6 my-2 tracking-wide"
+  >
+    <div class="text-copy-invert mx-4 font-bold">© 2020 | KUSHUL SOOMAREE</div>
 
     <ul class="menu flex justify-end">
-      <li>
-        <a
-          href="https://github.com/MrSunshyne/boo"
-          class="md:text-right underline text-xs uppercase tracking-widest pr-3"
-        >Star on Github</a>
+      <li class="footer-item">
+        <nuxt-link :to="{name: 'settings'}">Blogs</nuxt-link>
+      </li>
+      <li class="footer-item">
+        <nuxt-link :to="{name: 'settings'}">Events</nuxt-link>
+      </li>
+      <li class="footer-item">
+        <nuxt-link :to="{name: 'settings'}">Projects</nuxt-link>
       </li>
     </ul>
   </div>
@@ -27,7 +30,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .footer-wrapper {
   /* @apply text-center; */
   display: grid;
@@ -45,5 +48,13 @@ export default {
 }
 
 .logo {
+}
+
+.footer-item {
+  @apply mx-4 text-copy-invert font-bold;
+
+  a {
+    @apply border-b-2 border-gray-800;
+  }
 }
 </style>

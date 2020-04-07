@@ -50,7 +50,7 @@ a {
   background-image: url("../images/p1.png");
   background-size: auto;
   background-repeat: repeat;
-  @apply bg-background-secondary;
+  @apply bg-background-primary;
 
   
 }

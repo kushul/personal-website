@@ -38,21 +38,27 @@ $mobile: 480px;
     // background
     --bg-background-primary: #f7fafc;
     --bg-background-secondary: #f7fafc;
+    --bg-background-invert: #000;
 
     // text
     --text-copy-primary: #000;
+    --text-copy-invert: #fff;
   }
 
   .theme-dark {
     --bg-background-primary: #102C44;
     --bg-background-secondary: #102C44;
+    --bg-background-invert: #fff;
 
     --text-copy-primary: #fff;
+    --text-copy-invert: #2D3748;
   }
 
   .theme-sepia {
     --bg-background-primary: #f1e7d0;
     --bg-background-secondary: #f1e7d0;
+    --bg-background-invert: #000;
 
     --text-copy-primary: #433422;
+    --text-copy-invert: #fff;
   }
