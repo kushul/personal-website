@@ -46,4 +46,11 @@ a {
 
 .content-wrapper {
   transition: background-color .25s;
+  position: relative;
+  background-image: url("../images/p1.png");
+  background-size: auto;
+  background-repeat: repeat;
+  @apply bg-background-secondary;
+
+  
 }

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex min-h-screen flex-col bg-background-secondary text-copy-primary content-wrapper font-display"
+    class="flex min-h-screen flex-col text-copy-primary content-wrapper font-display"
     :class="theme"
   >
     <menu-section :theme="theme" @update-theme="updateTheme" @local-theme="storeTheme"></menu-section>
