@@ -52,7 +52,7 @@ export default {
 
 .footer-item {
   a {
-    @apply mx-4 font-bold border-b-2 border-gray-800 text-copy-invert;
+    @apply mx-4 font-bold border-b-2 border-gray-800;
   }
 }
 </style>
