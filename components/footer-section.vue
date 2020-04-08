@@ -5,7 +5,7 @@
     <div class="text-copy-invert mx-4 font-bold">© 2020 | KUSHUL SOOMAREE</div>
 
     <ul class="menu flex justify-end">
-      <li class="footer-item">
+      <li class="kush-footer-item">
         <nuxt-link :to="{name: 'settings'}">Blogs</nuxt-link>
       </li>
       <li class="footer-item">
@@ -39,6 +39,14 @@ export default {
 }
 
 /* purgecss start ignore */
+
+.kush-footer-item {
+  @apply mx-4 font-bold;
+
+  a {
+    @apply border-b-2 border-gray-800 text-copy-invert;
+  }
+}
 
 /* purgecss end ignore */
 </style>
