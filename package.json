@@ -13,6 +13,7 @@
     "deploy-gh": "npm run generate && git add -A && git commit -m 'generated using npm run deploy-gh' &&  git push -u origin master"
   },
   "dependencies": {
+    "@growthbunker/vuetimeline": "^0.1.16",
     "@nuxtjs/dotenv": "^1.4.0",
     "@tryghost/content-api": "^1.3.6",
     "nuxt": "^2.0.0",

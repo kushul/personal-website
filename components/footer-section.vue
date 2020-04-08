@@ -50,9 +50,15 @@ export default {
 .logo {
 }
 
+/* purgecss start ignore */
+
 .footer-item {
+  @apply mx-4 font-bold;
+
   a {
-    @apply mx-4 font-bold border-b-2 border-gray-800;
+    @apply border-b-2 border-gray-800 text-copy-invert;
   }
 }
+
+/* purgecss end ignore */
 </style>

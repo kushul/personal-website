@@ -33,7 +33,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~/plugins/date.js'],
+  plugins: [{ src: "~/plugins/date.js" }, { src: "@/plugins/vuetimeline.js" }],
 
   /*
    ** Nuxt.js dev-modules
