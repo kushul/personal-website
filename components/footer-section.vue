@@ -32,33 +32,13 @@ export default {
 
 <style scoped lang="scss">
 .footer-wrapper {
-  /* @apply text-center; */
   display: grid;
-  /* grid-auto-columns: auto; */
-  /* grid-template-rows: 1fr 1fr; */
-}
-
-@sm {
-  .footer-wrapper {
-    /* grid-template-columns: 100px 1fr; */
-    /* grid-template-rows: 1fr; */
-    /* grid-gap: 100px; */
-    padding: 20px 0;
-  }
 }
 
 .logo {
 }
 
 /* purgecss start ignore */
-
-.footer-item {
-  @apply mx-4 font-bold;
-
-  a {
-    @apply border-b-2 border-gray-800 text-copy-invert;
-  }
-}
 
 /* purgecss end ignore */
 </style>
