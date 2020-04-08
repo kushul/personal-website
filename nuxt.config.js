@@ -82,6 +82,10 @@ export default {
       return config
     }
   },
+  purgeCSS: {
+    mode: 'postcss',
+    whitelist: ['kush']
+  },
   generate: {
     dir: 'docs'
   },

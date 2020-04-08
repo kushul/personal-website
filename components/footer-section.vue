@@ -8,10 +8,10 @@
       <li class="kush-footer-item">
         <nuxt-link :to="{name: 'settings'}">Blogs</nuxt-link>
       </li>
-      <li class="footer-item">
+      <li class="kush-footer-item">
         <nuxt-link :to="{name: 'settings'}">Events</nuxt-link>
       </li>
-      <li class="footer-item">
+      <li class="kush-footer-item">
         <nuxt-link :to="{name: 'settings'}">Projects</nuxt-link>
       </li>
     </ul>
