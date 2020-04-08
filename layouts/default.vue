@@ -56,6 +56,10 @@ export default {
 </script>
 
 <style lang="scss">
+[class^='gb-']:not(.gb-base-icon) {
+  font-family: Nunito, sans-serif !important;
+}
+
 :root {
   /* color-scheme: light dark; */
 }

@@ -1,37 +1,40 @@
 <template>
   <div>
     <vue-timeline-update
-      :date="new Date('2017-02-26')"
-      title="v2.2.0 - Initial D"
-      description="Today I am thrilled to announce the release of Vue.js 2.2.0."
-      thumbnail="/images/vuetimeline/initial_d.jpg"
-      category="announcement"
-      icon="code"
-      color="red"
-    />
-
-    <!-- Another update -->
-    <vue-timeline-update
-      :date="new Date('2016-11-22')"
-      title="v2.1.0 - Hunter X Hunter"
-      description="Today I am thrilled to announce the release of Vue.js 2.1.0."
-      thumbnail="/images/vuetimeline/hunter_x_hunter.jpg"
-      category="announcement"
-      icon="code"
-      color="turquoise"
-    />
-
-    <!-- Yet another update -->
-    <vue-timeline-update
-      :date="new Date('2016-09-30')"
-      title="v2.0.0 - Ghost in the Shell"
-      description="Today I am thrilled to announce the release of Vue.js 2.0.0"
-      thumbnail="/images/vuetimeline/ghost_in_the_shell.jpg"
-      category="announcement"
-      icon="code"
-      color="white"
-      is-last
-    />
+      v-for="(project, index) in projects"
+      :key="index"
+      :date="getDate(project.date)"
+      :title="project.title"
+      :description="project.description"
+      :thumbnail="'/images/' + project.thumbnail"
+      :category="project.role"
+      :icon="project.icon"
+      :color="project.color"
+      :animation="true"
+      :animation-duration="1500"
+      :animation-container="project.role"
+      :is-last="true"
+      class="timeline-container"
+    >
+      <div v-for="(tech,index) in project.tech" :key="index">{{tech}} /</div>
+      <a :href="project.url" target="_blank" class="website-link">View website</a>
+    </vue-timeline-update>
   </div>
 </template>
+
+<script>
+import projects from '../static/content/projects'
+export default {
+  data() {
+    return {
+      projects: projects
+    }
+  },
+  methods: {
+    getDate(date) {
+      return new Date(date)
+    }
+  }
+}
+</script>
 
