@@ -1,4 +1,10 @@
 export default {
+  pageTransition: {
+    name: 'page',
+    mode: 'out-in',
+    beforeEnter(el) {
+    }
+  },
   mode: 'universal',
   /*
    ** Headers of the page

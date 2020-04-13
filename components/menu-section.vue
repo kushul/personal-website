@@ -86,10 +86,7 @@
         <nuxt-link :to="{name: 'projects'}">Projects</nuxt-link>
       </li>
       <li>
-        <nuxt-link :to="{name: 'tag'}">Tags</nuxt-link>
-      </li>
-      <li>
-        <nuxt-link :to="{name: 'author'}">Authors</nuxt-link>
+        <nuxt-link :to="{name: 'events'}">Events</nuxt-link>
       </li>
       <li>
         <button class="text-gray-800 ma-0" @click="toggleTheme()">
