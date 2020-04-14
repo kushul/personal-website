@@ -40,6 +40,7 @@ export default {
   },
   created() {
     this.$store.dispatch('initGhost')
+    this.storeTheme()
   },
   methods: {
     updateTheme(val) {
@@ -48,9 +49,6 @@ export default {
     storeTheme(val) {
       this.theme = val
     }
-  },
-  craeted() {
-    this.storeTheme()
   }
 }
 </script>
