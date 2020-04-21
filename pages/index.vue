@@ -1,22 +1,26 @@
 <template>
-  <div class="container mx-auto main-home-container">
-    <div
-      class="tagline-wrapper"
-      v-bind:style="{ 'grid-area': tagline.gridarea, 'justify-content': tagline.justify, 'align-items': tagline.align }"
-      v-for="(tagline, index) in taglines"
-      :key="index"
-    >
-      <h2
-        class="tracking-tight font-serif text-copy-primary text-3xl md:text-5xl text-fade"
-      >{{tagline.text}}</h2>
-      <img class="image-fade" :src="findImage(tagline.image)" alt="creative" />
+  <div class="container mx-auto home-main-container">
+    <MainIntro />
+    <div class="main-tagline-container section-gap">
+      <div
+        class="tagline-wrapper"
+        v-bind:style="{ 'grid-area': tagline.gridarea, 'justify-content': tagline.justify, 'align-items': tagline.align }"
+        v-for="(tagline, index) in taglines"
+        :key="index"
+      >
+        <h2
+          class="tracking-tight font-serif text-copy-primary text-3xl md:text-5xl text-fade"
+        >{{tagline.text}}</h2>
+        <img class="image-fade" :src="findImage(tagline.image)" alt="creative" />
+      </div>
+      <Main-image />
     </div>
-    <Main-image />
   </div>
 </template>
 <script>
 import { ghost, postsPerPage, postIndexFields } from '../api/ghost'
 import MainImage from '../components/home-main-tagline.vue'
+import MainIntro from '../components/home-main-intro.vue'
 
 import PostList from '../components/PostList'
 export default {
@@ -105,7 +109,8 @@ export default {
   },
   components: {
     PostList,
-    MainImage
+    MainImage,
+    MainIntro
   },
   methods: {
     findImage(name) {
@@ -125,7 +130,7 @@ export default {
 }
 */
 
-.main-home-container {
+.main-tagline-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 0.5fr 1fr 0.5fr;
