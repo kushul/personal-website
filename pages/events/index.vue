@@ -150,6 +150,7 @@
           ></div>
           <div class="flex flex-col w-full md:flex-row">
             <div
+              v-if="event"
               :class="event.color"
               class="flex flex-row justify-around p-4 font-bold leading-none uppercase md:flex-col md:items-center md:justify-center"
             >
