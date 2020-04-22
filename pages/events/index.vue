@@ -150,9 +150,7 @@
           ></div>
           <div class="flex flex-col w-full md:flex-row">
             <div
-              v-if="event"
-              :class="event.color"
-              class="flex flex-row justify-around p-4 font-bold leading-none uppercase md:flex-col md:items-center md:justify-center"
+              class="flex bg-gray-900 flex-row justify-around p-4 font-bold leading-none uppercase md:flex-col md:items-center md:justify-center"
             >
               <div class="md:text-lg">20</div>
               <div class="md:text-xl">Oct</div>
