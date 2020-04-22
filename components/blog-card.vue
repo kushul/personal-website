@@ -1,6 +1,6 @@
 <template>
-  <nuxt-link :to="'/blog/' + post.slug" class="rounded overflow-hidden shadow">
-    <img class="w-full object-cover" :src="post.feature_image" :alt="post.title" />
+  <nuxt-link :to="'/blog/' + post.slug" class="blog-card rounded overflow-hidden blog-shadow">
+    <img class="w-full object-cover h-48" :src="post.feature_image" :alt="post.title" />
     <div class="px-6 py-4">
       <div class="font-bold text-xl">{{ post.title }}</div>
       <div
@@ -27,6 +27,12 @@
 
 <script>
 export default {
-	props: ['post']
+  props: ['post']
 }
 </script>
+
+<style lang="scss" scoped>
+.blog-card {
+  background: #0d2234;
+}
+</style>
