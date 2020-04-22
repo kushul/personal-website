@@ -11,12 +11,19 @@
         </div>
       </div>
     </div>
-    <div class="right-part-wrapper">
+    <div class="right-part-wrapper flex flex-col justify-center">
       <div class="author-job">
-        <h3>Software Engineer</h3>
+        <h3 class="text-green-400 text-base font-semibold">Software Engineer</h3>
       </div>
       <div class="author-title">
-        <h4>Based in Mauritius, I'm a Developer and graphic designer</h4>
+        <h4
+          class="text-4xl leading-snug my-4"
+        >Based in Mauritius, I'm a Developer and graphic designer</h4>
+      </div>
+      <div class="author-summary">
+        <p
+          class="text-lg"
+        >Create the highest, grandest vision possible for your life, because you can become what you believe(testing)</p>
       </div>
       <div class="social-media-container">
         <SocialMedia />
@@ -75,5 +82,18 @@ export default {
 
 .social-media-container {
   margin: 40px 0;
+}
+
+.author-job h3 {
+  position: relative;
+  &::after {
+    content: '';
+    width: 70px;
+    height: 2px;
+    position: absolute;
+    margin-left: 20px;
+    top: 50%;
+    @apply bg-green-400;
+  }
 }
 </style>
