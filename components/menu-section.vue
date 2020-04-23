@@ -140,7 +140,7 @@
               />
             </svg>
           </template>
-          <template v-else>
+          <template v-else-if="$colorMode.preference === 'dark'">
             <svg
               width="430"
               height="432"
