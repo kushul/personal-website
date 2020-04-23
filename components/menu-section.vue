@@ -197,6 +197,7 @@ export default {
         myTheme = 'dark'
       }
       this.$colorMode.preference = myTheme
+      console.log(this.$colorMode.preference)
     }
   }
 }
