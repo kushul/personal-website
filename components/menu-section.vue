@@ -90,7 +90,7 @@
       </li>
       <li>
         <button class="text-gray-800 ma-0" @click="toggleTheme()">
-          <template v-if="theme === 'theme-light'">
+          <template v-if="$colorMode.preference === 'light'">
             <svg
               width="76"
               height="78"
@@ -104,7 +104,7 @@
               />
             </svg>
           </template>
-          <template v-else-if="theme === 'theme-sepia'">
+          <template v-else-if="$colorMode.preference === 'sepia'">
             <svg
               width="288"
               height="314"
@@ -164,22 +164,22 @@
 export default {
   data() {
     return {
-      themes: ['theme-dark', 'theme-light', 'theme-sepia'],
-      currentThemeIndex: 0
+      // themes: ['theme-dark', 'theme-light', 'theme-sepia'],
+      // currentThemeIndex: 0
     }
   },
   computed: {
     total() {
-      return this.themes.length - 1
+      // return this.themes.length - 1
     },
     currentTheme() {
-      return this.themes[this.currentThemeIndex]
+      // return this.themes[this.currentThemeIndex]
     }
   },
   mounted() {
-    let localStoreTheme = this.theme
-    localStoreTheme = localStorage.getItem('theme') || 'theme-dark'
-    this.$emit('local-theme', localStoreTheme)
+    // let localStoreTheme = this.theme
+    // localStoreTheme = localStorage.getItem('theme') || 'theme-dark'
+    // this.$emit('local-theme', localStoreTheme)
   },
   props: {
     theme: {
@@ -188,17 +188,15 @@ export default {
   },
   methods: {
     toggleTheme() {
-      let myTheme = this.theme
-      // myTheme = myTheme === 'theme-light' ? 'theme-dark' : 'theme-light'
-      if (this.currentThemeIndex === this.total) {
-        this.currentThemeIndex = 0
-      } else {
-        this.currentThemeIndex++
+      let myTheme = this.$colorMode.preference
+      if (myTheme == 'light') {
+        myTheme = 'sepia'
+      } else if (myTheme == 'dark') {
+        myTheme = 'light'
+      } else if (myTheme == 'sepia') {
+        myTheme = 'dark'
       }
-
-      myTheme = this.themes[this.currentThemeIndex]
-      this.$emit('update-theme', myTheme)
-      localStorage.setItem('theme', myTheme)
+      this.$colorMode.preference = myTheme
     }
   }
 }
@@ -228,7 +226,6 @@ export default {
           display: flex;
           width: 50px;
           height: 50px;
-          background: #171515;
           border-radius: 50%;
           font-size: 30px;
           justify-content: center;
@@ -250,13 +247,8 @@ export default {
           }
 
           &:hover {
-            color: #ebc815;
-            box-shadow: 0 0 15px #ebc815;
-            text-shadow: 0 0 15px #ebc815;
-
             &::before {
               transform: scale(1.2);
-              box-shadow: 0 0 15px #ebc815;
               filter: blur(3px);
             }
           }
@@ -279,7 +271,7 @@ export default {
           &:hover,
           &:active {
             // letter-spacing: 5px !important;
-            @apply text-green-500;
+            color: var(--green);
           }
 
           &::after,
@@ -301,8 +293,7 @@ export default {
               backface-visibility: hidden;
               transition: width 350ms ease-in-out;
               width: 100%;
-
-              @apply border-green-500;
+              border-color: var(--green);
             }
 
             &::before {
@@ -320,7 +311,7 @@ export default {
 .nuxt-link-exact-active {
   &::after,
   &::before {
-    border: 1px solid #48bb78 !important;
+    border: 1px solid var(--green) !important;
     bottom: 0px;
     content: ' ';
     display: block;
@@ -329,7 +320,7 @@ export default {
     width: 100% !important;
   }
 
-  @apply text-green-500;
+  color: var(--green);
 
   // letter-spacing: 5px !important;;
 }

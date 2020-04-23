@@ -405,7 +405,7 @@ export default {
   .content {
     display: block;
 
-    @apply bg-background-primary;
+    // @apply bg-background-primary;
   }
 }
 

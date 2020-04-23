@@ -6,23 +6,24 @@
 */
 module.exports = {
   theme: {
+    darkSelector: '.dark-mode',
     fontFamily: {
       display: ['Nunito', 'sans-serif'],
     },
     colors: {
       black: "#000",
       white: "#fff",
-      background: {
-        'primary': 'var(--bg-background-primary)',
-        'secondary': 'var(--bg-background-secondary)',
-        'invert': 'var(--bg-background-invert)'
-      },
-      copy: {
-        'primary': 'var(--text-copy-primary)',
-        'secondary': 'var(--text-copy-secondary)',
-        'invert': 'var(--text-copy-invert)'
+      // background: {
+      //   'primary': 'var(--bg-background-primary)',
+      //   'secondary': 'var(--bg-background-secondary)',
+      //   'invert': 'var(--bg-background-invert)'
+      // },
+      // copy: {
+      //   'primary': 'var(--text-copy-primary)',
+      //   'secondary': 'var(--text-copy-secondary)',
+      //   'invert': 'var(--text-copy-invert)'
 
-      },
+      // },
       gray: {
         100: "#f7fafc",
         200: "#edf2f7",
@@ -139,6 +140,12 @@ module.exports = {
       }
     }
   },
-  variants: {},
-  plugins: []
+  variants: {
+    backgroundColor: ["dark", "dark-hover", "dark-group-hover", "dark-even", "dark-odd"],
+    borderColor: ["dark", "dark-focus", "dark-focus-within"],
+    textColor: ["dark", "dark-hover", "dark-active"]
+  },
+  plugins: [
+    require('tailwindcss-dark-mode')()
+  ]
 }

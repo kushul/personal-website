@@ -153,7 +153,7 @@
       text-align: center;
       cursor: pointer;
       border-radius: 50%;
-      border: 4px solid #d8e2dc;
+      border: 4px solid var(--border-social-icon);
       transition: all 0.5s ease;
       display: flex;
       justify-content: center;

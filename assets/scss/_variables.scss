@@ -7,20 +7,17 @@ $mobile: 480px;
 :root {
      /* Colours */
   --blue: #3eb0ef;
-  --green: #00a672;
   --purple: #ad26b4;
-  --yellow: #fecd35;
   --red: #f05230;
-  --darkgrey: #091a28;
-  --midgrey: #738a94;
+  --darkgray: #171515;
+  --midgray: #738a94;
   --lightgrey: #c5d2d9;
-  --whitegrey: #e5eff5;
+  --whitegray: #e5eff5;
   --pink: #fa3a57;
   --brown: #a3821a;
   --dark-bg: #020b1a;
-  --darkmode: var(--darkgrey);
-  --darkmode-lighter: var(--midgrey);
-  
+  --yellow-sun:  #fecd35; 
+  --coffee: #D0BB94;
     //Layout
     --gutter: 15px;
   
@@ -30,35 +27,50 @@ $mobile: 480px;
     --font-oswald: 'Oswald', sans-serif;;
   
     --header-height: 250px;
+
+
+  }
+
+  .dark-mode {
+    --green: #48BB78;
+    --border-social-icon: #d8e2dc;
+  }
+  .light-mode {
+    --green: #38A169;
+    --border-social-icon: #2D3748;
+  }
+  .sepia-mode {
+    --green: #2F855A;
+    --border-social-icon: #744210;
   }
 
 
-  .theme-light {
+  // .theme-light {
 
-    // background
-    --bg-background-primary: #f7fafc;
-    --bg-background-secondary: #f7fafc;
-    --bg-background-invert: #000;
+  //   // background
+  //   --bg-background-primary: #f7fafc;
+  //   --bg-background-secondary: #f7fafc;
+  //   --bg-background-invert: #000;
 
-    // text
-    --text-copy-primary: #000;
-    --text-copy-invert: #fff;
-  }
+  //   // text
+  //   --text-copy-primary: #000;
+  //   --text-copy-invert: #fff;
+  // }
 
-  .theme-dark {
-    --bg-background-primary: #0d2234;
-    --bg-background-secondary: #102C44;
-    --bg-background-invert: #fff;
+  // .theme-dark {
+  //   --bg-background-primary: #0d2234;
+  //   --bg-background-secondary: #102C44;
+  //   --bg-background-invert: #fff;
 
-    --text-copy-primary: #fff;
-    --text-copy-invert: #2D3748;
-  }
+  //   --text-copy-primary: #fff;
+  //   --text-copy-invert: #2D3748;
+  // }
 
-  .theme-sepia {
-    --bg-background-primary: #FFFAF0;
-    --bg-background-secondary: #FFFAF0;
-    --bg-background-invert: #000;
+  // .theme-sepia {
+  //   --bg-background-primary: #FFFAF0;
+  //   --bg-background-secondary: #FFFAF0;
+  //   --bg-background-invert: #000;
 
-    --text-copy-primary: #433422;
-    --text-copy-invert: #fff;
-  }
+  //   --text-copy-primary: #433422;
+  //   --text-copy-invert: #fff;
+  // }

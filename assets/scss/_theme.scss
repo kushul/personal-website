@@ -1,0 +1,105 @@
+body {
+    background-color: #fff;
+    @apply text-gray-200;
+  }
+
+  // dark mode
+  
+  .dark-mode {
+    body {
+        @apply bg-blue-900 text-gray-300;
+    }
+
+    .main-menu {
+        ul {
+            li {
+                button {
+                    background: var(--darkgray);
+                    &:hover {
+                        color: var(--whitegray);
+                        box-shadow: 0 0 15px var(--whitegray);
+                        text-shadow: 0 0 15px var(--whitegray);
+            
+                        &::before {
+                          box-shadow: 0 0 15px var(--whitegray);
+                        }
+                      }
+                }
+            }
+        }
+    }
+  }
+
+
+  // light mode
+  
+  .light-mode {
+    body {
+        @apply bg-gray-200 text-gray-800;
+    }
+
+    .main-menu {
+        ul {
+            li {
+                button {
+                    @apply bg-gray-800;
+                    svg {
+                        fill: #4A5568;
+                    }
+                    &:hover {
+                        color: var(--yellow-sun);
+                        box-shadow: 0 0 15px var(--yellow-sun);
+                        text-shadow: 0 0 15px var(--yellow-sun);
+
+                        svg {
+                            transition: 0.5s;
+                            fill: var(--yellow-sun);
+                        }
+            
+                        &::before {
+                          box-shadow: 0 0 15px var(--yellow-sun);
+                        }
+                      }
+                }
+            }
+        }
+    }
+  }
+
+  // sepia-mode
+  
+  .sepia-mode {
+    body {
+        background-color: #f1e7d0;
+  
+    @apply text-yellow-900; 
+    }
+
+    .main-menu {
+        ul {
+            li {
+                button {
+                    @apply bg-yellow-900;
+                    svg {
+                        fill: #FEFCBF;
+                    }
+                    &:hover {
+                        color: var(--coffee);
+                        box-shadow: 0 0 15px var(--coffee);
+                        text-shadow: 0 0 15px var(--coffee);
+
+                        svg {
+                            transition: 0.5s;
+                            fill: var(--coffee);
+                        }
+            
+                        &::before {
+                          box-shadow: 0 0 15px var(--coffee);
+                        }
+                      }
+                }
+            }
+        }
+    }
+   
+  }

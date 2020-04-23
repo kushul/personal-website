@@ -1,9 +1,6 @@
 <template>
-  <div
-    class="flex min-h-screen flex-col text-copy-primary content-wrapper font-display"
-    :class="theme"
-  >
-    <menu-section :theme="theme" @update-theme="updateTheme" @local-theme="storeTheme"></menu-section>
+  <div class="flex min-h-screen flex-col content-wrapper font-display">
+    <menu-section></menu-section>
     <!-- <input type="checkbox" class="theme-switch" v-model="darkmode" /> -->
     <nuxt class="flex-grow" />
     <footer-section />

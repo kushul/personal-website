@@ -13,7 +13,7 @@
     </div>
     <div class="right-part-wrapper flex flex-col justify-center">
       <div class="author-job">
-        <h3 class="text-green-400 text-base font-semibold">Software Engineer</h3>
+        <h3 class="text-base font-semibold">Software Engineer</h3>
       </div>
       <div class="author-title">
         <h4
@@ -86,6 +86,7 @@ export default {
 
 .author-job h3 {
   position: relative;
+  color: var(--green);
   &::after {
     content: '';
     width: 70px;
@@ -93,7 +94,7 @@ export default {
     position: absolute;
     margin-left: 20px;
     top: 50%;
-    @apply bg-green-400;
+    background: var(--green);
   }
 }
 </style>
