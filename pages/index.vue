@@ -1,19 +1,23 @@
 <template>
   <div class="home-main-container">
     <MainIntro />
-    <div class="main-tagline-container section-gap bg-test-secondary">
-      <div
-        class="tagline-wrapper"
-        v-bind:style="{ 'grid-area': tagline.gridarea, 'justify-content': tagline.justify, 'align-items': tagline.align }"
-        v-for="(tagline, index) in taglines"
-        :key="index"
-      >
-        <h2
-          class="tracking-tight font-serif text-copy-primary text-3xl md:text-5xl text-fade"
-        >{{tagline.text}}</h2>
-        <img class="image-fade" :src="findImage(tagline.image)" alt="creative" />
+    <div class="p-10 bg-background-secondary">
+      <div class="main-tagline-container container mx-auto">
+        <div
+          class="tagline-wrapper"
+          v-bind:style="{ 'grid-area': tagline.gridarea, 'justify-content': tagline.justify, 'align-items': tagline.align }"
+          v-for="(tagline, index) in taglines"
+          :key="index"
+        >
+          <div class="tagline-item" :class="tagline.color">
+            <h2
+              class="font-serif tracking-normal leading-none text-copy-primary text-xl text-fade font-bold"
+            >{{tagline.text}}</h2>
+            <img class="w-20" :src="findImage(tagline.image)" alt="creative" />
+          </div>
+        </div>
+        <Main-image />
       </div>
-      <Main-image />
     </div>
   </div>
 </template>
@@ -53,56 +57,64 @@ export default {
           image: 'creative.svg',
           gridarea: 'a',
           justify: 'flex-end',
-          align: 'flex-end'
+          align: 'flex-end',
+          color: 'bg-red-500'
         },
         {
-          text: 'Creative',
-          image: 'creative.svg',
+          text: 'Problem solving',
+          image: 'problem_solving.svg',
           gridarea: 'b',
           justify: 'center',
-          align: 'flex-end'
+          align: 'flex-end',
+          color: 'bg-teal-500'
         },
         {
-          text: 'Creative',
-          image: 'creative.svg',
+          text: 'Design',
+          image: 'design.svg',
           gridarea: 'c',
           justify: 'flex-start',
-          align: 'flex-end'
+          align: 'flex-end',
+          color: 'bg-purple-500'
         },
         {
-          text: 'Creative',
-          image: 'creative.svg',
+          text: 'Git',
+          image: 'git.svg',
           gridarea: 'd',
           justify: 'flex-end',
-          align: 'center'
+          align: 'center',
+          color: 'bg-indigo-500'
         },
         {
-          text: 'Creative',
-          image: 'creative.svg',
+          text: 'Responsive',
+          image: 'responsive.svg',
           gridarea: 'f',
           justify: 'flex-start',
-          align: 'center'
+          align: 'center',
+          color: 'bg-pink-500'
         },
         {
-          text: 'Creative',
-          image: 'creative.svg',
+          text: 'Javascript',
+          image: 'javascript.svg',
           gridarea: 'h',
           justify: 'flex-end',
-          align: 'flex-start'
+          align: 'flex-start',
+          color: 'bg-yellow-600'
         },
         {
-          text: 'Creative',
-          image: 'creative.svg',
+          text: 'Vuejs',
+          image: 'vuejs.svg',
           gridarea: 'i',
           justify: 'center',
-          align: 'flex-start'
+          align: 'flex-start',
+          color: 'bg-green-500'
         },
         {
-          text: 'Creative',
-          image: 'creative.svg',
+          text: 'CSS',
+          image: 'css.svg',
           gridarea: 'j',
           justify: 'flex-start',
-          align: 'flex-start'
+          align: 'flex-start',
+          color: 'bg-orange-500'
         }
       ]
     }
@@ -115,7 +127,7 @@ export default {
   methods: {
     findImage(name) {
       if (name) {
-        const result = require(`~/assets/images/${name}`)
+        const result = require(`~/assets/images/icon/${name}`)
         return result
       }
     }
@@ -136,8 +148,6 @@ export default {
   grid-template-rows: 0.5fr 1fr 0.5fr;
   grid-gap: 60px;
   grid-template-areas: 'a b c' 'd e f' 'h i j';
-
-  @apply mt-8;
 }
 
 .tagline-wrapper {
@@ -149,8 +159,12 @@ export default {
 }
 
 .text-fade {
-  height: 100%;
   position: absolute;
+  top: 50%; /* position the top  edge of the element at the middle of the parent */
+  left: 50%; /* position the left edge of the element at the middle of the parent */
+  text-shadow: #000 1px 0 5px;
+
+  transform: translate(-50%, -50%);
 }
 
 .title {
@@ -166,5 +180,9 @@ export default {
 
 .button {
   @apply shadow px-5 py-2 inline-block;
+}
+
+.tagline-item {
+  @apply w-32 h-32 rounded-full flex justify-center items-center relative text-white;
 }
 </style>

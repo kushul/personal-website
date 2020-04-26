@@ -13,8 +13,8 @@ module.exports = {
     colors: {
       black: "#000",
       white: "#fff",
-      test: {
-        'secondary': 'var(--bg-test-secondary)',
+      background: {
+        'secondary': 'var(--bg-background-secondary)',
       },
       // copy: {
       //   'primary': 'var(--text-copy-primary)',
@@ -134,6 +134,7 @@ module.exports = {
       },
       pink: {
         200: "#FED7E2",
+        500: "#ED64A6",
         700: "#B83280"
       }
     }
