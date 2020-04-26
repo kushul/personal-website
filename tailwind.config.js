@@ -13,11 +13,9 @@ module.exports = {
     colors: {
       black: "#000",
       white: "#fff",
-      // background: {
-      //   'primary': 'var(--bg-background-primary)',
-      //   'secondary': 'var(--bg-background-secondary)',
-      //   'invert': 'var(--bg-background-invert)'
-      // },
+      test: {
+        'secondary': 'var(--bg-test-secondary)',
+      },
       // copy: {
       //   'primary': 'var(--text-copy-primary)',
       //   'secondary': 'var(--text-copy-secondary)',

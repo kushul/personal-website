@@ -1,7 +1,7 @@
 <template>
-  <div class="container mx-auto home-main-container">
+  <div class="home-main-container">
     <MainIntro />
-    <div class="main-tagline-container section-gap">
+    <div class="main-tagline-container section-gap bg-test-secondary">
       <div
         class="tagline-wrapper"
         v-bind:style="{ 'grid-area': tagline.gridarea, 'justify-content': tagline.justify, 'align-items': tagline.align }"

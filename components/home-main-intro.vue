@@ -1,5 +1,5 @@
 <template>
-  <div class="home-main-intro section-gap">
+  <div class="home-main-intro section-gap container mx-auto">
     <div class="left-part-wrapper">
       <div class="profile-image-wrapper">
         <div class="name-wrapper">
