@@ -33,10 +33,10 @@ body {
 }
 
 a {
-  transition: color 0.4s ease-out;
+  /* transition: color 0.4s ease-out; */
 
   &:hover {
-    transition: color 0.2s ease-in;
+    /* transition: color 0.2s ease-in; */
   }
 }
 

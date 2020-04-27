@@ -33,16 +33,22 @@ $mobile: 480px;
 
   .dark-mode {
     --bg-background-secondary: rgba(1, 15, 28, 0.5);
+    --text-copy-primary: #e2e8f0;
+    --text-copy-secondary: #a9c7df;
     --green: #48BB78;
     --border-social-icon: #d8e2dc;
   }
   .light-mode {
     --bg-background-secondary: rgba(191, 191, 191, 0.3);
+    --text-copy-primary: #2D3748;
+    --text-copy-secondary: #2A4365;
     --green: #38A169;
     --border-social-icon: #2D3748;
   }
   .sepia-mode {
     --bg-background-secondary: rgba(120, 60, 0, .4);
+    --text-copy-primary: #744210;
+    --text-copy-secondary: #9C4221;
     --green: #2F855A;
     --border-social-icon: #744210;
   }

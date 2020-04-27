@@ -16,12 +16,10 @@ module.exports = {
       background: {
         'secondary': 'var(--bg-background-secondary)',
       },
-      // copy: {
-      //   'primary': 'var(--text-copy-primary)',
-      //   'secondary': 'var(--text-copy-secondary)',
-      //   'invert': 'var(--text-copy-invert)'
-
-      // },
+      copy: {
+        'primary': 'var(--text-copy-primary)',
+        'secondary': 'var(--text-copy-secondary)',
+      },
       gray: {
         100: "#f7fafc",
         200: "#edf2f7",
