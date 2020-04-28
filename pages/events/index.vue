@@ -1,5 +1,9 @@
 <template>
-  <div class="main-events-container container mx-auto my-8">
+  <div class="main-events-container container mx-auto mb-8">
+    <h1 class="page-title">Events Participation</h1>
+    <h3
+      class="page-subtitle"
+    >“On our own, we are marshmallows and dried spaghetti, but together we can become something bigger.” “New and stirring things are belittled because if they are not belittled the humiliating question arises 'Why then are you not taking part in them?”</h3>
     <div class="mb-6">
       <div
         v-for="(item, index) in eventType"
@@ -140,7 +144,7 @@
       <div
         v-for="(event, index) in events"
         :key="index"
-        class="event-wrapper text-copy-primary flex flex-col card-shadow"
+        class="event-wrapper text-copy-primary flex flex-col shadow-2xl"
       >
         <div class="glass"></div>
         <div class="content">
@@ -150,7 +154,7 @@
           ></div>
           <div class="flex flex-col w-full md:flex-row">
             <div
-              class="flex bg-gray-900 flex-row justify-around p-4 font-bold leading-none uppercase md:flex-col md:items-center md:justify-center"
+              class="flex bg-gray-900 text-white flex-row justify-around p-4 font-bold leading-none uppercase md:flex-col md:items-center md:justify-center"
             >
               <div class="md:text-lg">20</div>
               <div class="md:text-xl">Oct</div>
@@ -159,7 +163,7 @@
             <div class="p-4 font-normal">
               <h1 class="mb-4 text-xl font-bold leading-none tracking-tight">{{ event.title }}</h1>
 
-              <div class="flex items-center mt-2 text-white">
+              <div class="flex items-center mt-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -234,7 +238,7 @@
                 </svg>
                 <h4 class="px-2 text-sm">Krathathon 2019</h4>
               </div>
-              <div class="flex items-center mt-2 text-white">
+              <div class="flex items-center mt-2">
                 <svg
                   width="90"
                   height="90"
@@ -257,8 +261,8 @@
                 v-for="(link, index) in event.links"
                 :key="index"
               >
-                <a :href="link.url" target="_blank" class="text-green-400 flex items-center w-3/4">
-                  <span class="border-green-400 border-b-2 mr-2">{{ link.text }}</span>
+                <a :href="link.url" target="_blank" class="link flex items-center w-3/4">
+                  <span class="border-b-2 mr-2">{{ link.text }}</span>
                   <svg
                     width="90"
                     height="90"
@@ -412,6 +416,14 @@ export default {
 .select-chip {
   &:first-child {
     @apply ml-0;
+  }
+}
+
+.link {
+  color: var(--green);
+
+  span {
+    border-color: var(--green);
   }
 }
 </style>

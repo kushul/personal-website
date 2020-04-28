@@ -1,7 +1,9 @@
 <template>
   <div class="home-main-container">
     <MainIntro />
-    <div class="p-10 bg-background-secondary">
+    <div class="bg-background-secondary pb-16">
+      <h1 class="title">Skills & Expertise</h1>
+      <h2 class="subtitle">A list of skills and technology i have been experienced.</h2>
       <div class="main-tagline-container container mx-auto">
         <div
           class="tagline-wrapper"
@@ -19,12 +21,18 @@
         <Main-image />
       </div>
     </div>
+    <div class="container mx-auto">
+      <h1 class="title">Projects</h1>
+      <h2 class="subtitle">A list of skills and technology i have been experienced.</h2>
+      <Timeline />
+    </div>
   </div>
 </template>
 <script>
 import { ghost, postsPerPage, postIndexFields } from '../api/ghost'
 import MainImage from '../components/home-main-tagline.vue'
 import MainIntro from '../components/home-main-intro.vue'
+import Timeline from '../components/Timeline'
 
 import PostList from '../components/PostList'
 export default {
@@ -122,7 +130,8 @@ export default {
   components: {
     PostList,
     MainImage,
-    MainIntro
+    MainIntro,
+    Timeline
   },
   methods: {
     findImage(name) {
@@ -163,20 +172,21 @@ export default {
   top: 50%; /* position the top  edge of the element at the middle of the parent */
   left: 50%; /* position the left edge of the element at the middle of the parent */
   text-shadow: #000 1px 0 5px;
+  color: #fff;
 
   transform: translate(-50%, -50%);
 }
 
-.title {
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-.links {
-  padding-top: 15px;
-}
+// .title {
+//   display: block;
+//   font-weight: 300;
+//   font-size: 100px;
+//   color: #35495e;
+//   letter-spacing: 1px;
+// }
+// .links {
+//   padding-top: 15px;
+// }
 
 .button {
   @apply shadow px-5 py-2 inline-block;

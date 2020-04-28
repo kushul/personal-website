@@ -47,7 +47,7 @@ export default {
 
   a {
     transition: all 0.2s ease-in-out;
-    @apply border-b-2 border-gray-800;
+    @apply border-b-2 border-copy-invert;
 
     &:hover {
       @apply text-green-500 border-green-500;

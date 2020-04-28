@@ -9,3 +9,23 @@
 .section-gap {
     margin: 50px auto;
 }
+
+.title {
+    font-family: var(--font-oswald);
+    letter-spacing: 5px;
+    @apply text-5xl text-center pt-16 pb-3 font-semibold;
+}
+
+.subtitle {
+    @apply text-3xl text-center mb-12;
+}
+
+.page-title {
+    font-family: var(--font-oswald);
+    letter-spacing: 5px;
+    @apply text-4xl font-bold text-left mb-3;
+}
+
+.page-subtitle {
+    @apply text-xl font-medium text-left mb-8;
+}

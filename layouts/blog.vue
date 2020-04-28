@@ -1,9 +1,6 @@
 <template>
-  <div
-    class="flex min-h-screen flex-col text-copy-primary content-wrapper font-display"
-    :class="theme"
-  >
-    <menu-section :theme="theme" @update-theme="updateTheme" @local-theme="storeTheme"></menu-section>
+  <div class="flex min-h-screen flex-col text-copy-primary content-wrapper font-display">
+    <menu-section></menu-section>
     <div class="post-template">
       <main id="site-main" class="site-main outer">
         <div class="inner">
@@ -25,18 +22,9 @@ export default {
     FooterSection
   },
   data() {
-    return {
-      theme: 'theme-light'
-    }
+    return {}
   },
-  methods: {
-    updateTheme(val) {
-      this.theme = val
-    },
-    storeTheme(val) {
-      this.theme = val
-    }
-  }
+  methods: {}
 }
 </script>
 

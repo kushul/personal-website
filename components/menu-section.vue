@@ -1,7 +1,7 @@
 
 <template>
   <div
-    class="main-menu container mx-auto font-bold md:flex justify-center md:justify-between py-8 items-center py-3"
+    class="main-menu container mx-auto font-bold md:flex justify-center md:justify-between items-center"
   >
     <a class="text-center block md:text-left text-3xl logo-wrapper" href="/">
       <!-- Generator: Adobe Illustrator 23.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
@@ -168,6 +168,7 @@ export default {
 
 @screen sm {
   .main-menu {
+    height: 120px;
     @apply flex;
     ul {
       li {

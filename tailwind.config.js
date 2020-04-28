@@ -15,10 +15,13 @@ module.exports = {
       white: "#fff",
       background: {
         'secondary': 'var(--bg-background-secondary)',
+        'invert': 'var(--bg-background-invert)',
       },
       copy: {
         'primary': 'var(--text-copy-primary)',
         'secondary': 'var(--text-copy-secondary)',
+        'invert': 'var(--text-copy-invert)',
+        'invert': 'var(--border-copy-invert)',
       },
       gray: {
         100: "#f7fafc",

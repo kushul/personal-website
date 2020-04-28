@@ -1,6 +1,9 @@
 <template>
   <div class="container mx-auto">
-    <h1 class="text-2xl font-bold py-2 text-center md:text-left mb-3">All posts</h1>
+    <h1 class="page-title">Blogs</h1>
+    <h3
+      class="page-subtitle"
+    >“You can work quite hard, in particular online, and do quite well independently, but if you really want to grow you need points of leverage and most of them come from knowing people.”</h3>
 
     <PostList
       v-if="indexPosts && indexPagination"

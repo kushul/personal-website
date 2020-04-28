@@ -1,5 +1,5 @@
 <template>
-  <div class="home-main-intro section-gap container mx-auto">
+  <div class="home-main-intro container mx-auto">
     <div class="left-part-wrapper">
       <div class="profile-image-wrapper">
         <div class="name-wrapper">
@@ -43,11 +43,15 @@ export default {
 
 <style lang="scss" scoped>
 .home-main-intro {
-  height: 70vh;
+  height: calc(100vh - 120px);
   overflow: hidden;
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-gap: 40px;
+}
+
+.left-part-wrapper {
+  @apply flex items-end justify-center;
 }
 
 .name-wrapper {
@@ -75,7 +79,7 @@ export default {
     justify-content: flex-end;
     align-items: center;
     img {
-      width: 50%;
+      width: 60%;
     }
   }
 }
