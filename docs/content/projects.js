@@ -22,7 +22,7 @@ const projects = [
         thumbnail: 'lsl.png',
         date: '2017-02-26',
         company: 'Open Source',
-        color: 'turquoise',
+        color: 'red',
         icon: 'code'
     },
     {
@@ -35,7 +35,7 @@ const projects = [
         thumbnail: 'lsl.png',
         date: '2017-02-26',
         company: 'Open Source',
-        color: 'turquoise',
+        color: 'green',
         icon: 'code'
     },
     {
@@ -48,7 +48,7 @@ const projects = [
         thumbnail: 'lsl.png',
         date: '2017-02-26',
         company: 'Open Source',
-        color: 'turquoise',
+        color: 'blue',
         icon: 'code'
     },
 
