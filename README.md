@@ -25,7 +25,7 @@ Turn to the [issues](https://github.com/MrSunshyne/boo/issues) tab to see what's
 
 ```bash
 # install dependencies
-$ npm run install
+$ npm install
 
 # serve with hot reload at localhost:3000
 $ npm run dev
