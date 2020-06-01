@@ -32,34 +32,34 @@ $mobile: 480px;
   }
 
   .dark-mode {
+    --bg-background-primary: #00162B;
     --bg-background-secondary: rgba(1, 15, 28, 0.5);
     --bg-background-invert: #fff;
-    --text-copy-invert: #1A202C;
     --text-copy-primary: #e2e8f0;
+    --text-copy-invert: #1A202C;
     --border-copy-invert: #1A202C;
     --text-copy-secondary: #a9c7df;
     --green: #48BB78;
-    --border-social-icon: #d8e2dc;
   }
   .light-mode {
+    --bg-background-primary: #EDF2F7;
     --bg-background-secondary: rgba(191, 191, 191, 0.3);
     --bg-background-invert: #1A202C;
-    --text-copy-invert: #fff;
-    --border-copy-invert: #fff;
     --text-copy-primary: #2D3748;
+    --text-copy-invert: #fff;
+    --border-copy-invert: rgb(165, 154, 154);
     --text-copy-secondary: #2A4365;
     --green: #38A169;
-    --border-social-icon: #2D3748;
   }
   .sepia-mode {
+    --bg-background-primary: #f1e7d0;
     --bg-background-secondary: rgba(120, 60, 0, .4);
     --bg-background-invert: #1A202C;
+    --text-copy-primary: #744210;
     --text-copy-invert: #fff;
     --border-copy-invert: #fff;
-    --text-copy-primary: #744210;
     --text-copy-secondary: #9C4221;
     --green: #2F855A;
-    --border-social-icon: #744210;
   }
 
 

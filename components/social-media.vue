@@ -10,7 +10,7 @@
             xmlns:xlink="http://www.w3.org/1999/xlink"
             x="0px"
             y="0px"
-            class="h-6 w-6 fill-current"
+            class="h-4 w-4 sm:w-6 sm:h-6 fill-current"
             viewBox="0 0 155.139 155.139"
             style="enable-background:new 0 0 155.139 155.139;"
             xml:space="preserve"
@@ -32,7 +32,7 @@
             height="511pt"
             viewBox="0 0 511 511.9"
             width="511pt"
-            class="h-6 w-6 fill-current"
+            class="h-4 w-4 sm:w-6 sm:h-6 fill-current"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
@@ -61,7 +61,7 @@
             viewBox="0 0 543.684 543.684"
             style="enable-background:new 0 0 543.684 543.684;"
             xml:space="preserve"
-            class="h-6 w-6 fill-current"
+            class="h-4 w-4 sm:w-6 sm:h-6 fill-current"
           >
             <g>
               <g>
@@ -92,7 +92,7 @@
           <svg
             version="1.1"
             id="Capa_1"
-            class="h-6 w-6 fill-current"
+            class="h-4 w-4 sm:w-6 sm:h-6 fill-current"
             xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink"
             x="0px"
@@ -124,7 +124,7 @@
             viewBox="0 0 24 24"
             width="512"
             xmlns="http://www.w3.org/2000/svg"
-            class="h-6 w-6 fill-current"
+            class="h-4 w-4 sm:w-6 sm:h-6 fill-current"
           >
             <path
               d="m23.994 24v-.001h.006v-8.802c0-4.306-.927-7.623-5.961-7.623-2.42 0-4.044 1.328-4.707 2.587h-.07v-2.185h-4.773v16.023h4.97v-7.934c0-2.089.396-4.109 2.983-4.109 2.549 0 2.587 2.384 2.587 4.243v7.801z"
@@ -153,7 +153,7 @@
       text-align: center;
       cursor: pointer;
       border-radius: 50%;
-      border: 4px solid var(--border-social-icon);
+      border: 4px solid;
       transition: all 0.5s ease;
       display: flex;
       justify-content: center;
@@ -219,5 +219,29 @@
 .social-items li a:hover.linkedIn svg {
   transition: all 0.5s ease;
   fill: #0073b1;
+}
+
+@media (max-width: 1024px) {
+  .social-items {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .social-media-container {
+    margin: 20px 0;
+  }
+  .social-items {
+    justify-content: space-evenly;
+
+    li {
+      a {
+        margin: 0;
+        width: 40px;
+        height: 40px;
+        border: 2px solid;
+      }
+    }
+  }
 }
 </style>

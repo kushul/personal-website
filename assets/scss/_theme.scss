@@ -1,9 +1,7 @@
   // dark mode
   
   .dark-mode {
-    body {
-        @apply bg-blue-900 text-gray-300;
-    }
+   
 
     .main-menu {
         ul {
@@ -29,9 +27,7 @@
   // light mode
   
   .light-mode {
-    body {
-        @apply bg-gray-200 text-gray-800;
-    }
+   
 
     .main-menu {
         ul {
@@ -64,12 +60,7 @@
   // sepia-mode
   
   .sepia-mode {
-    body {
-        background-color: #f1e7d0;
-  
-    @apply text-yellow-900; 
-    }
-
+   
     .main-menu {
         ul {
             li {

@@ -29,7 +29,7 @@
       </svg>
     </a>
 
-    <ul class="list-items flex justify-center items-center py-10 md:py-0 md:mr-3">
+    <ul class="list-items flex justify-center items-center py-5 sm:py-10 md:py-0 md:mr-3">
       <li>
         <nuxt-link :to="{name: 'index'}">Home</nuxt-link>
       </li>

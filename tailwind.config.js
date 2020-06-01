@@ -14,6 +14,7 @@ module.exports = {
       black: "#000",
       white: "#fff",
       background: {
+        'primary': 'var(--bg-background-primary)',
         'secondary': 'var(--bg-background-secondary)',
         'invert': 'var(--bg-background-invert)',
       },

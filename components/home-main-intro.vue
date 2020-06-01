@@ -17,12 +17,12 @@
       </div>
       <div class="author-title">
         <h4
-          class="text-4xl leading-snug my-4"
+          class="text-xl md:text-2xl lg:text-4xl leading-snug my-4"
         >Based in Mauritius, I'm a Developer and graphic designer</h4>
       </div>
       <div class="author-summary">
         <p
-          class="text-lg"
+          class="sm:text-lg text-base"
         >Create the highest, grandest vision possible for your life, because you can become what you believe(testing)</p>
       </div>
       <div class="social-media-container">
@@ -48,10 +48,16 @@ export default {
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-gap: 40px;
+  grid-template-areas: '👨‍🦰 🍌';
 }
 
 .left-part-wrapper {
   @apply flex items-end justify-center;
+  grid-area: 👨‍🦰;
+}
+
+.right-part-wrapper {
+  grid-area: 🍌;
 }
 
 .name-wrapper {
@@ -99,6 +105,59 @@ export default {
     margin-left: 20px;
     top: 50%;
     background: var(--green);
+  }
+}
+
+@media (max-width: 1400px) {
+  .home-main-intro {
+    grid-template-columns: 1fr 1fr;
+  }
+  .profile-image-wrapper {
+    .image-wrapper {
+      img {
+        width: 50%;
+      }
+    }
+  }
+  .name-wrapper {
+    padding: 20px;
+    h1 {
+      font-size: 60px;
+      line-height: 70px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .home-main-intro {
+    grid-template-columns: 1fr;
+    grid-template-areas: '🍌' '👨‍🦰';
+  }
+
+  .right-part-wrapper {
+    text-align: center;
+  }
+
+  .profile-image-wrapper {
+    .image-wrapper {
+      justify-content: center;
+      padding-left: 50px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .home-main-intro {
+    grid-gap: 0;
+  }
+  .name-wrapper {
+    display: none;
+  }
+
+  .profile-image-wrapper {
+    .image-wrapper {
+      padding-left: 0;
+    }
   }
 }
 </style>
