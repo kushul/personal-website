@@ -1,8 +1,11 @@
 <template>
   <div
-    class="container bg-background-invert text-copy-invert flex justify-center items-center mx-auto text-sm py-6 my-2 tracking-wide"
+    class="container bg-background-invert text-copy-invert flex justify-center items-center mx-auto text-sm sm:py-6 py-3 mt-2 tracking-wide"
   >
-    <div class="text-copy-invert mx-4 font-bold">© 2020 | KUSHUL SOOMAREE</div>
+    <div class="text-copy-invert mx-4 font-bold text-sm flex text-sm">
+      © 2020
+      <span class="sm:block hidden ml-1">| KUSHUL SOOMAREE</span>
+    </div>
 
     <ul class="menu flex justify-end">
       <li class="kush-footer-item">
@@ -43,7 +46,7 @@ export default {
 .kush-footer-item {
   margin: 0;
   padding: 0;
-  @apply mx-4 font-bold;
+  @apply mx-2 font-bold;
 
   a {
     transition: all 0.2s ease-in-out;
@@ -58,6 +61,12 @@ export default {
 .nuxt-link-exact-active {
   border-bottom: 2px solid #48bb78 !important;
   color: #48bb78 !important;
+}
+
+@screen sm {
+  .kush-footer-item {
+    @apply mx-4;
+  }
 }
 
 /* purgecss end ignore */

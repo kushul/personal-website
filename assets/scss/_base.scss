@@ -13,11 +13,11 @@
 .title {
     font-family: var(--font-oswald);
     letter-spacing: 5px;
-    @apply text-5xl text-center pt-16 pb-3 font-semibold;
+    @apply text-2xl text-center pt-8 pb-3 font-semibold;
 }
 
 .subtitle {
-    @apply text-3xl text-center mb-12;
+    @apply text-xl text-center mb-6;
 }
 
 .page-title {
@@ -28,4 +28,23 @@
 
 .page-subtitle {
     @apply text-xl font-medium text-left mb-8;
+}
+
+
+@screen sm {
+    .title {
+        @apply text-3xl pt-10;
+    }
+    .subtitle {
+        @apply text-xl mb-8;
+    }
+}
+
+@screen lg {
+    .title {
+        @apply text-5xl pt-16;
+    }
+    .subtitle {
+        @apply text-3xl mb-12;
+    }
 }
