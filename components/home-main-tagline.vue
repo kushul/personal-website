@@ -1,7 +1,7 @@
 <template>
   <div class="main-image-wrapper relative flex items-center justify-center">
     <img
-      class="h-56 md:w-56 mx-auto rounded-full object-cover"
+      class="md:h-56 md:w-56 sm:w-40 sm:h-40 w-20 h-20 mx-auto rounded-full object-cover"
       src="~/assets/images/kushul_cartoon.jpg"
       alt
     />
@@ -130,6 +130,128 @@
 
   &.horizontal {
     animation: moveInOutX 0.35s linear infinite;
+  }
+}
+
+@media (max-width: 768px) {
+  .dots-left-top {
+    left: -90%;
+  }
+  .dots-right-top {
+    right: -90%;
+  }
+  .dots-left {
+    left: -70%;
+  }
+  .dots-right {
+    right: -70%;
+  }
+  .dots-left-bottom {
+    left: -90%;
+  }
+  .dots-right-bottom {
+    right: -90%;
+  }
+  .dots-top {
+    top: -50%;
+  }
+  .dots-bottom {
+    bottom: -50%;
+  }
+}
+
+@media (max-width: 640px) {
+  .works__pulse-bg {
+    width: 100px;
+    height: 100px;
+  }
+
+  .works__pulse-bg + .works__pulse-bg {
+    width: 90px;
+    height: 90px;
+  }
+  .dots__dot {
+    width: 2px;
+    height: 2px;
+    margin: 3px;
+  }
+  .dots-left-top {
+    left: -35%;
+  }
+  .dots-right-top {
+    right: -35%;
+  }
+  .dots-left {
+    left: -25%;
+  }
+  .dots-right {
+    right: -25%;
+  }
+  .dots-left-bottom {
+    left: -35%;
+  }
+  .dots-right-bottom {
+    right: -35%;
+  }
+  .dots-top {
+    top: -50%;
+  }
+  .dots-bottom {
+    bottom: -50%;
+  }
+}
+
+@media (max-width: 450px) {
+  .dots-left-top {
+    left: -70%;
+  }
+  .dots-right-top {
+    right: -70%;
+  }
+  .dots-left {
+    left: -70%;
+  }
+  .dots-right {
+    right: -70%;
+  }
+  .dots-left-bottom {
+    left: -70%;
+  }
+  .dots-right-bottom {
+    right: -70%;
+  }
+  .dots-top {
+    top: -50%;
+  }
+  .dots-bottom {
+    bottom: -50%;
+  }
+}
+
+@media (max-width: 400px) {
+  .dots-left-top {
+    left: -100%;
+  }
+  .dots-right-top {
+    right: -100%;
+  }
+  .dots-left {
+    left: -70%;
+  }
+  .dots-right {
+    right: -70%;
+  }
+  .dots-left-bottom {
+    left: -100%;
+  }
+  .dots-right-bottom {
+    right: -100%;
+  }
+  .dots-top {
+    top: -50%;
+  }
+  .dots-bottom {
+    bottom: -50%;
   }
 }
 </style>

@@ -11,11 +11,14 @@
           v-for="(tagline, index) in taglines"
           :key="index"
         >
-          <div class="tagline-item" :class="tagline.color">
+          <div
+            class="tagline-item md:w-32 md:h-32 sm:w-24 sm:h-24 w-16 h-16"
+            :class="tagline.color"
+          >
             <h2
-              class="font-serif tracking-normal leading-none text-copy-primary text-xl text-fade font-bold"
+              class="font-serif tracking-normal leading-none text-copy-primary md:text-xl sm:text-sm text-xs text-fade font-bold"
             >{{tagline.text}}</h2>
-            <img class="w-20" :src="findImage(tagline.image)" alt="creative" />
+            <img class="md:w-20 sm:w-12 w-8" :src="findImage(tagline.image)" alt="creative" />
           </div>
         </div>
         <Main-image />
@@ -155,7 +158,7 @@ export default {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 0.5fr 1fr 0.5fr;
-  grid-gap: 60px;
+  grid-gap: 35px;
   grid-template-areas: 'a b c' 'd e f' 'h i j';
 }
 
@@ -193,6 +196,12 @@ export default {
 }
 
 .tagline-item {
-  @apply w-32 h-32 rounded-full flex justify-center items-center relative text-white;
+  @apply rounded-full flex justify-center items-center relative text-white;
+}
+
+@screen sm {
+  .main-tagline-container {
+    grid-gap: 60px;
+  }
 }
 </style>
