@@ -3,9 +3,7 @@
   .dark-mode {
    
 
-    .main-menu {
-        ul {
-            li {
+    .color-mode {
                 button {
                     background: var(--darkgray);
                     &:hover {
@@ -18,8 +16,6 @@
                         }
                       }
                 }
-            }
-        }
     }
   }
 
@@ -29,9 +25,7 @@
   .light-mode {
    
 
-    .main-menu {
-        ul {
-            li {
+    .color-mode {
                 button {
                     @apply bg-gray-800;
                     svg {
@@ -51,8 +45,6 @@
                           box-shadow: 0 0 15px var(--yellow-sun);
                         }
                       }
-                }
-            }
         }
     }
   }
@@ -61,9 +53,7 @@
   
   .sepia-mode {
    
-    .main-menu {
-        ul {
-            li {
+    .color-mode {
                 button {
                     @apply bg-yellow-900;
                     svg {
@@ -83,9 +73,7 @@
                           box-shadow: 0 0 15px var(--coffee);
                         }
                       }
-                }
             }
-        }
     }
    
   }
