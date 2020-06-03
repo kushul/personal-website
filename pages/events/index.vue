@@ -4,12 +4,12 @@
     <h3
       class="page-subtitle"
     >“On our own, we are marshmallows and dried spaghetti, but together we can become something bigger.” “New and stirring things are belittled because if they are not belittled the humiliating question arises 'Why then are you not taking part in them?”</h3>
-    <div class="mb-6">
+    <div class="mb-6 chips-container">
       <div
         v-for="(item, index) in eventType"
         :key="index"
         :class="[item.bg, item.text]"
-        class="select-chip cursor-pointer ml-4 text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 rounded-full"
+        class="select-chip cursor-pointer sm:mr-4 sm:mb-4 text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 rounded-full"
       >
         <svg
           width="90"
@@ -144,7 +144,7 @@
       <div
         v-for="(event, index) in events"
         :key="index"
-        class="event-wrapper text-copy-primary flex flex-col shadow-2xl"
+        class="event-wrapper bg-background-secondary text-copy-primary flex flex-col shadow-2xl"
       >
         <div class="glass"></div>
         <div class="content">
@@ -364,7 +364,7 @@ export default {
 <style lang="scss" scoped>
 .events-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   grid-gap: 40px;
 }
 
@@ -424,6 +424,26 @@ export default {
 
   span {
     border-color: var(--green);
+  }
+}
+
+@media (max-width: 640px) {
+  .chips-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+  }
+}
+
+@screen sm {
+  .events-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@screen md {
+  .events-container {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 </style>

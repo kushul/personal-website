@@ -23,11 +23,11 @@
 .page-title {
     font-family: var(--font-oswald);
     letter-spacing: 5px;
-    @apply text-4xl font-bold text-left mb-3;
+    @apply text-2xl font-bold text-left mb-3;
 }
 
 .page-subtitle {
-    @apply text-xl font-medium text-left mb-8;
+    @apply text-base font-medium text-left mb-8;
 }
 
 
@@ -38,6 +38,12 @@
     .subtitle {
         @apply text-xl mb-8;
     }
+    .page-title {
+        @apply text-3xl;
+    }
+    .page-subtitle {
+        @apply text-lg;
+    }
 }
 
 @screen lg {
@@ -46,5 +52,11 @@
     }
     .subtitle {
         @apply text-3xl mb-12;
+    }
+    .page-title {
+        @apply text-4xl;
+    }
+    .page-subtitle {
+        @apply text-xl;
     }
 }
