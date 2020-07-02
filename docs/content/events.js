@@ -5,6 +5,7 @@ const events = [
         title: 'Vue JS Conference Amsterdam 2020',
         image:
             'vuejs-amsterdam-2020.jpg',
+        bg_position: "bg-bottom",
         date: '2020-02-20T00:00:00.000Z',
         name: 'Vuejs conference',
         country: 'Amsterdam',
@@ -44,6 +45,7 @@ const events = [
         title: '1st place in the krathathon 2019',
         image:
             'krakathon-2019.jpg',
+        bg_position: "bg-center",
         date: '2019-10-19T00:00:00.000Z',
         name: 'Krakathon',
         icon: "competition.svg",
@@ -62,6 +64,7 @@ const events = [
         title: 'Switch conference Mauritius 2019',
         image:
             'switch-conference-2019.jpg',
+        bg_position: "bg-center",
         date: '2019-06-07T00:00:00.000Z',
         name: 'Switch conference',
         country: 'Mauritius',
