@@ -150,7 +150,7 @@
         <div class="content h-full">
           <div
             :class="event.bg_position"
-            class="w-full h-40 bg-cover rounded-t bg-center"
+            class="w-full h-40 bg-cover rounded-t"
             :style="{backgroundImage: 'url('+require('@/assets/images/events/'+ event.image)+')'}"
           ></div>
           <div class="flex event-content-wrapper flex-col w-full md:flex-row">
