@@ -147,18 +147,19 @@
         class="event-wrapper bg-background-secondary text-copy-primary flex flex-col shadow-2xl"
       >
         <div class="glass"></div>
-        <div class="content">
+        <div class="content h-full">
           <div
-            class="w-full h-40 bg-top bg-cover rounded-t"
-            :style="{backgroundImage: 'url('+require('@/assets/images/'+ event.image)+')'}"
+            :class="event.bg_position"
+            class="w-full h-40 bg-cover rounded-t bg-center"
+            :style="{backgroundImage: 'url('+require('@/assets/images/events/'+ event.image)+')'}"
           ></div>
-          <div class="flex flex-col w-full md:flex-row">
+          <div class="flex event-content-wrapper flex-col w-full md:flex-row">
             <div
               class="flex bg-gray-900 text-white flex-row justify-around p-4 font-bold leading-none uppercase md:flex-col md:items-center md:justify-center"
             >
-              <div class="md:text-lg">20</div>
-              <div class="md:text-xl">Oct</div>
-              <div class="md:text-3xl">2019</div>
+              <div class="md:text-lg">{{ event.date | day }}</div>
+              <div class="md:text-xl">{{ event.date | month }}</div>
+              <div class="md:text-3xl">{{ event.date | year }}</div>
             </div>
             <div class="p-4 font-normal">
               <h1 class="mb-4 text-xl font-bold leading-none tracking-tight">{{ event.title }}</h1>
@@ -236,7 +237,7 @@
                     d="M23.35,20.596c-0.14,0.318-0.731,1.623-0.731,1.623c-0.03,0.06-0.104,0.114-0.17,0.121c0,0-1.422,0.159-1.771,0.198  c-0.344,0.039-0.419,0.261-0.159,0.496c0.255,0.235,1.314,1.201,1.314,1.201c0.051,0.043,0.077,0.132,0.063,0.196  c0,0-0.286,1.405-0.356,1.746c-0.071,0.342,0.118,0.48,0.42,0.307c0.305-0.171,1.549-0.88,1.549-0.88  c0.057-0.033,0.152-0.033,0.209,0c0,0,1.244,0.709,1.549,0.88c0.302,0.173,0.491,0.035,0.42-0.307  c-0.07-0.34-0.356-1.746-0.356-1.746c-0.014-0.064,0.013-0.152,0.063-0.196c0,0,1.06-0.966,1.314-1.201  c0.26-0.235,0.185-0.457-0.159-0.496c-0.349-0.039-1.771-0.198-1.771-0.198c-0.065-0.007-0.14-0.061-0.17-0.121  c0,0-0.592-1.305-0.731-1.623C23.73,20.278,23.496,20.278,23.35,20.596z"
                   />
                 </svg>
-                <h4 class="px-2 text-sm">Krathathon 2019</h4>
+                <h4 class="px-2 text-sm">{{ event.name }}</h4>
               </div>
               <div class="flex items-center mt-2">
                 <svg
@@ -357,6 +358,29 @@ export default {
         return result
       }
     }
+  },
+  filters: {
+    day(date) {
+      var options = {
+        day: 'numeric',
+        timeZone: 'Indian/Mauritius'
+      }
+      return new Date(date).toLocaleDateString('en', options)
+    },
+    month(date) {
+      var options = {
+        month: 'short',
+        timeZone: 'Indian/Mauritius'
+      }
+      return new Date(date).toLocaleDateString('en', options)
+    },
+    year(date) {
+      var options = {
+        year: 'numeric',
+        timeZone: 'Indian/Mauritius'
+      }
+      return new Date(date).toLocaleDateString('en', options)
+    }
   }
 }
 </script>
@@ -366,6 +390,10 @@ export default {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 40px;
+}
+
+.event-content-wrapper {
+  height: calc(100% - 10rem);
 }
 
 .event-wrapper {
