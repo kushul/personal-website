@@ -26,7 +26,7 @@
     </div>
     <div class="container mx-auto">
       <h1 class="title">Projects</h1>
-      <h2 class="subtitle">A list of skills and technology i have been experienced.</h2>
+      <h2 class="subtitle">Some projects I help built</h2>
       <Timeline />
     </div>
   </div>

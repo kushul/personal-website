@@ -6,7 +6,7 @@
       :date="getDate(project.date)"
       :title="project.title"
       :description="project.description"
-      :thumbnail="'/images/' + project.thumbnail"
+      :thumbnail="'/images/projects/' + project.thumbnail"
       :category="project.role"
       :icon="project.icon"
       :color="project.color"
@@ -19,8 +19,8 @@
       <div class="tech-wrapper">
         <div v-for="(tech,index) in project.tech" :key="index" class="tech">{{tech}}</div>
       </div>
-      <div class="text-right">
-        <a :href="project.url" target="_blank" class="website-link">
+      <div class="sm:text-right text-center">
+        <a :href="project.url" target="_blank" class="website-link sm:mr-8 mr-0">
           <span></span>
           <span></span>
           <span></span>
@@ -63,6 +63,9 @@ export default {
   .gb-vue-timeline-update__right {
     margin-bottom: 20px;
     padding-bottom: 0 !important;
+  }
+  .gb-vue-timeline-update__thumbnail {
+    width: 100%;
   }
 }
 
