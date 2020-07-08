@@ -21,9 +21,16 @@
         >Based in Mauritius, I'm a Developer and graphic designer</h4>
       </div>
       <div class="author-summary">
-        <p
-          class="sm:text-lg text-base"
-        >Create the highest, grandest vision possible for your life, because you can become what you believe(testing)</p>
+        <p class="sm:text-lg text-base">
+          " Design is everywhere. From the dress you're wearing to the smartphone you're holding, it's
+          design. "
+        </p>
+      </div>
+      <div class="npx-wrapper mt-4">
+        Try
+        <span
+          class="py-1 px-2 text-copy-primary bg-background-secondary rounded cursor-move inline-block"
+        >npx kushul_soomaree</span> on your terminal for a small resume.
       </div>
       <div class="social-media-container">
         <SocialMedia />
@@ -49,6 +56,12 @@ export default {
   grid-template-columns: 2fr 1fr;
   grid-gap: 40px;
   grid-template-areas: '👨‍🦰 🍌';
+}
+
+.npx-wrapper {
+  font-family: var(--font-roboto);
+  span {
+  }
 }
 
 .left-part-wrapper {
@@ -158,6 +171,12 @@ export default {
     .image-wrapper {
       padding-left: 0;
     }
+  }
+}
+
+@media (max-width: 960px) and (orientation: landscape) {
+  .author-summary {
+    display: none;
   }
 }
 </style>

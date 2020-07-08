@@ -147,6 +147,10 @@ export default {
 .tech-wrapper {
   @apply flex text-sm text-copy-primary;
 
+  .tech {
+    display: inline-block;
+  }
+
   .tech::after {
     content: '/';
     margin: 0 10px;
