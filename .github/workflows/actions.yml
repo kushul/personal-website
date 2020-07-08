@@ -13,4 +13,4 @@ jobs:
       - name: Install Dependencies
         run: npm install
       - name: Building for github
-        run: npm run generate
+        run: npm run build && npm run export
