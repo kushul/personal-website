@@ -1,5 +1,7 @@
 <template>
-  <div class="flex min-h-screen flex-col text-copy-primary content-wrapper font-display">
+  <div
+    class="flex min-h-screen flex-col bg-background-primary text-copy-primary content-wrapper font-display"
+  >
     <menu-section></menu-section>
     <div class="post-template">
       <main id="site-main" class="site-main outer">
