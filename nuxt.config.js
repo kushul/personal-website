@@ -5,6 +5,7 @@ export default {
     beforeEnter(el) {
     }
   },
+  target: 'static',
   mode: 'universal',
   /*
    ** Headers of the page

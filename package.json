@@ -9,8 +9,9 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
+    "export": "nuxt export",
     "test": "jest",
-    "deploy-gh": "npm run generate && git add -A && git commit -m 'generated using npm run deploy-gh' &&  git push -u origin master"
+    "deploy-gh": "npm run build && npm run export && git add -A && git commit -m 'generated using npm run deploy-gh' &&  git push -u origin master"
   },
   "dependencies": {
     "@growthbunker/vuetimeline": "^0.1.17",
