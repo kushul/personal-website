@@ -1,6 +1,10 @@
 <template>
   <nuxt-link :to="'/blog/' + post.slug" class="blog-card rounded overflow-hidden blog-shadow">
-    <img class="w-full object-cover h-48" :src="post.feature_image" :alt="post.title" />
+    <img
+      class="w-full object-cover h-48"
+      :src="formatThumbnailImages(post.feature_image)"
+      :alt="post.title"
+    />
     <div class="px-6 py-4">
       <div class="font-bold text-xl">{{ post.title }}</div>
       <div

@@ -11,6 +11,7 @@
     "generate": "nuxt generate",
     "export": "nuxt export",
     "test": "jest",
+    "moveimage": "rm -rf ./static/content/images && cp -R ../backend/content/images ./static/content",
     "deploy-gh": "npm run build && npm run export && git add -A && git commit -m 'generated using npm run deploy-gh' &&  git push -u origin master"
   },
   "dependencies": {

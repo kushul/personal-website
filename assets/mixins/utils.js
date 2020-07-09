@@ -50,36 +50,37 @@ const util = {
     )
   },
   replaceWithAbsolute(html) {
-    const replaceWith = 'https://mrsunshyne.gitlab.io'
+    const replaceWith = 'https://kushulsoomaree.netlify.app'
     if (html === null) {
       return html
     } else {
       const URLReplaced = html
-        .replace(/http:\/\/localhost:2368/g, replaceWith)
+        .replace(/http:\/\/localhost:2369/g, replaceWith)
         .replace(/http:\/\/localhost:3000/g, replaceWith)
       return URLReplaced
     }
   },
-  formatThumbnailImages(path, sizeParam) {
+  formatThumbnailImages(path) {
     const replaceWith = ''
-    let size = sizeParam || '500'
+    // let size = sizeParam || '500'
 
     let pathObject = splitpath(path)
     let ext = pathObject[3]
-    let dir = pathObject[1].replace(/content/g, 'thumbnail')
+    let dir = pathObject[1].replace(/content/g, 'content')
     let result = basename(path, ext)
-    let filepath = `${dir}${result}-${sizeParam}w${ext}`
+    let filepath = `${dir}${result}${ext}`
     const URLReplaced = filepath.replace(
-      /http:\/\/localhost:2368/g,
+      /http:\/\/localhost:2369/g,
       replaceWith
     )
     return URLReplaced
   },
   formatBodyImages(html) {
     const replaceWith = ''
-    const URLReplaced = html.replace(/http:\/\/localhost:2368/g, replaceWith)
+    const URLReplaced = html.replace(/http:\/\/localhost:2369/g, replaceWith)
     return URLReplaced
   }
 }
 
 export default util
+
