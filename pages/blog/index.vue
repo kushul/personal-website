@@ -17,6 +17,7 @@
 import { mapGetters, mapActions } from 'vuex'
 
 import PostList from '../../components/PostList'
+import { ghost, postsPerPage, postIndexFields } from '../../api/ghost'
 
 export default {
   name: 'PostIndex',
@@ -24,34 +25,53 @@ export default {
     PostList
   },
   computed: {
-    ...mapGetters({ ghost: 'getGhost' })
+    // ...mapGetters({ ghost: 'getGhost' })
   },
   created() {
-    this.fetchData()
+    // this.fetchData()
   },
   data() {
     return {
-      indexPosts: [],
-      indexPagination: 0
+      // indexPosts: [],
+      // indexPagination: 0
+    }
+  },
+  async asyncData({ store, params }) {
+    let pageginationPageNumber = 1
+    if (params.pageNumber) {
+      pageginationPageNumber = params.pageNumber
+    }
+    let paginationFilter = ''
+    let indexPosts = await ghost.posts.browse({
+      limit: store.state.ghostPostsPerPage,
+      page: pageginationPageNumber,
+      include: 'tags,authors',
+      fields: store.state.ghostPostIndexFields
+      // filter: 'featured: true'
+    })
+
+    let indexPagination = indexPosts.meta.pagination
+    return {
+      indexPosts,
+      indexPagination
     }
   },
   methods: {
-    async fetchData() {
-      let pageginationPageNumber = 1
-      if (this.$route.params.pageNumber) {
-        pageginationPageNumber = this.$route.params.pageNumber
-      }
-      let paginationFilter = ''
-      this.indexPosts = await this.ghost.posts.browse({
-        limit: this.$store.state.ghostPostsPerPage,
-        page: pageginationPageNumber,
-        include: 'tags,authors',
-        fields: this.$store.state.ghostPostIndexFields
-        // filter: 'featured: true'
-      })
-
-      this.indexPagination = this.indexPosts.meta.pagination
-    }
+    // async fetchData() {
+    //   let pageginationPageNumber = 1
+    //   if (this.$route.params.pageNumber) {
+    //     pageginationPageNumber = this.$route.params.pageNumber
+    //   }
+    //   let paginationFilter = ''
+    //   this.indexPosts = await this.ghost.posts.browse({
+    //     limit: this.$store.state.ghostPostsPerPage,
+    //     page: pageginationPageNumber,
+    //     include: 'tags,authors',
+    //     fields: this.$store.state.ghostPostIndexFields
+    //     // filter: 'featured: true'
+    //   })
+    //   this.indexPagination = this.indexPosts.meta.pagination
+    // }
   },
   head() {
     return {
