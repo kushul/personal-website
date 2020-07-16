@@ -555,7 +555,7 @@ export default {
     transition: all 0.2s ease-in-out;
     transform: translateX(320px);
     overflow-y: auto;
-    z-index: 100;
+    z-index: 10000;
     min-height: 100vh;
     height: 100vh;
     width: 320px;
