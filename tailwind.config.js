@@ -5,6 +5,10 @@
 ** Default: https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
 */
 module.exports = {
+  purge: {
+    enabled: false,
+    // content: ['./src/**/*.html'],
+  },
   theme: {
     darkSelector: '.dark-mode',
     fontFamily: {
