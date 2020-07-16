@@ -21,7 +21,7 @@ const events = [
     },
 
     {
-        type: 'participation',
+        type: 'competition',
         color: 'bg-purple-700',
         title: '2nd place in the webcup final 2019',
         image:
@@ -40,7 +40,7 @@ const events = [
         ]
     },
     {
-        type: 'participation',
+        type: 'competition',
         color: 'bg-yellow-700',
         title: '1st place in the krathathon 2019',
         image:
@@ -78,7 +78,7 @@ const events = [
         ]
     },
     {
-        type: 'participation',
+        type: 'attendee',
         color: 'bg-green-700',
         title: 'Switch conference Mauritius 2019',
         image:
@@ -154,7 +154,7 @@ const events = [
         ]
     },
     {
-        type: 'participation',
+        type: 'competition',
         color: 'bg-yellow-700',
         title: '1st place in the Webcup 2018',
         image:
