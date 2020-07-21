@@ -24,6 +24,9 @@
         <Main-image />
       </div>
     </div>
+    <div class="container mx-auto map-container">
+      <Map />
+    </div>
     <div class="container mx-auto">
       <h1 class="title">Projects</h1>
       <h2 class="subtitle">Some projects I help built</h2>
@@ -36,6 +39,7 @@ import { ghost, postsPerPage, postIndexFields } from '../api/ghost'
 import MainImage from '../components/home-main-tagline.vue'
 import MainIntro from '../components/home-main-intro.vue'
 import Timeline from '../components/Timeline'
+import Map from '../components/home-map'
 
 import PostList from '../components/PostList'
 export default {
@@ -134,7 +138,8 @@ export default {
     PostList,
     MainImage,
     MainIntro,
-    Timeline
+    Timeline,
+    Map
   },
   methods: {
     findImage(name) {
@@ -168,6 +173,12 @@ export default {
   justify-content: center;
   align-items: center;
   z-index: 10;
+}
+
+.map-container {
+  background: url('../assets/images/map-1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .text-fade {
