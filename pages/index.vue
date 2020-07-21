@@ -24,7 +24,7 @@
         <Main-image />
       </div>
     </div>
-    <div class="container mx-auto map-container">
+    <div class="py-12 map-container">
       <Map />
     </div>
     <div class="container mx-auto">

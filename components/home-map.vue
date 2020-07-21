@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container mx-auto">
     <h1 class="title">My Location</h1>
     <h2
       class="subtitle"
@@ -24,7 +24,7 @@ export default {}
 <style lang="scss" scoped>
 .radar {
   position: relative;
-  margin: calc(var(--gutter) * 3) auto;
+  margin: 0 auto;
   padding: 0;
   width: 480px;
   height: 480px;
