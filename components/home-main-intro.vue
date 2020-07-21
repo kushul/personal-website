@@ -22,8 +22,8 @@
       </div>
       <div class="author-summary">
         <p class="sm:text-lg text-base">
-          " Design is everywhere. From the dress you're wearing to the smartphone you're holding, it's
-          design. "
+          "Design is everywhere. From the dress you're wearing to the smartphone you're holding, it's
+          design."
         </p>
       </div>
       <div class="npx-wrapper mt-4">

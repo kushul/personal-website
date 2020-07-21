@@ -106,7 +106,7 @@ export default {
   },
   purgeCSS: {
     mode: 'postcss',
-    whitelist: ["dark-mode", "light-mode", "sepia-mode"]
+    whitelist: ["dark-mode", "light-mode", "sepia-mode", "bg-bottom", "bg-top", "bg-center"]
   },
   generate: {
     dir: 'docs'
