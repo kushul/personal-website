@@ -153,7 +153,7 @@
     <transition-group mode="out-in" class="events-container" name="fade" tag="div">
       <div
         v-for="(event, index) in retrieveEvents"
-        :key="index"
+        :key="index + 0"
         class="event-wrapper bg-background-secondary text-copy-primary flex flex-col shadow-2xl"
       >
         <div class="glass"></div>

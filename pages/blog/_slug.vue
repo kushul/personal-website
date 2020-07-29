@@ -6,7 +6,7 @@
         <img :src="formatThumbnailImages(post.feature_image)" alt="Post Image" />
       </figure>
       <section class="post-full-content">
-        <div ref="postContent" class="post-content" v-html="post.html" />
+        <div ref="postContent" class="post-content" v-html="formatBodyImages(post.html)" />
       </section>
 
       <div class="py-1 md:py-10 mb-16 border border-black">
