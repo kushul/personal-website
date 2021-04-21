@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/apps-integrations", {data:[],fetch:[],mutations:[["setGhost",{posts:{read:{},browse:{}},authors:{read:{},browse:{}},tags:{read:{},browse:{}},pages:{read:{},browse:{}},settings:{browse:{}}}]]});
