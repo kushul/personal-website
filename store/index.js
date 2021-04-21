@@ -28,7 +28,7 @@ export const state = () => ({
     'custom_excerpt',
     'excerpt' // excerpt doesn't seem to work in field definition (bug?)
   ],
-  ghostPostsPerPage: 7
+  ghostPostsPerPage: 8
 })
 
 export const mutations = {

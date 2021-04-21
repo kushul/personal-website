@@ -3,7 +3,7 @@
     class="container bg-background-invert text-copy-invert flex justify-center items-center mx-auto text-sm sm:py-6 py-3 mt-2 tracking-wide"
   >
     <div class="text-copy-invert mx-4 font-bold text-sm flex text-sm tagline">
-      © 2020
+      © 2021
       <span class="sm:block hidden ml-1">| KUSHUL SOOMAREE</span>
     </div>
 
