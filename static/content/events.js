@@ -1,5 +1,25 @@
 const events = [
     {
+        type: 'speaker',
+        color: 'bg-green-700',
+        title: 'Talking about Front-End Ecosystem',
+        image:
+            'devcon-2020.jpg',
+        bg_position: "bg-center",
+        date: '2020-09-10T00:00:00.000Z',
+        name: 'Developer Conference',
+        country: 'Virtual',
+        icon: "speaker.svg",
+        links: [
+            {
+                text: 'Video on Youtube',
+                url:
+                    'https://www.youtube.com/watch?v=5L7-GV0fqzc'
+            }
+
+        ]
+    },
+    {
         type: 'attendee',
         color: 'bg-pink-700',
         title: 'Vue JS Conference Amsterdam 2020',
