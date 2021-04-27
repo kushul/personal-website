@@ -248,7 +248,7 @@ article {
 .post-full-header {
   position: relative;
   margin: 0 auto;
-  padding: 70px 50px 50px;
+  padding: 70px 50px 30px;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
 }

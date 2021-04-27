@@ -2,6 +2,7 @@
   <div>
     <article class="post-full post" v-if="post">
       <article-head :post="post" />
+      
       <figure class="post-full-image">
         <img :src="formatThumbnailImages(post.feature_image)" alt="Post Image" />
       </figure>

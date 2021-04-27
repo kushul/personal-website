@@ -12,6 +12,11 @@
 
     <p class="post-full-custom-excerpt">{{ post.custom_excerpt }}</p>
 
+    <p class="text-base leading-snug mt-4"
+              v-for="author in post.authors"
+              :key="author.name"
+            >By {{ author.name }}</p>
+
     <!-- <div class="post-full-byline">
       <section class="post-full-byline-content">
         <ul class="author-list">

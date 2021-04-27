@@ -1,13 +1,39 @@
 const projects = [
     {
-        title: 'TV Guide | lexpress',
-        url: 'https://tv.lexpress.mu/',
+        title: 'LSL Digital website',
+        url: 'https://lsldigital.com/',
+        role: 'Front End Lead',
+        tech: ['Ghost API', 'Casper'],
+        description: 'LSL Digital website overall background and mainly focused on their services & solutions',
+        featured: true,
+        thumbnail: 'lsldigital.png',
+        date: '2021-09-02',
+        company: 'Open Source',
+        color: 'black',
+        icon: 'code'
+    },
+    {
+        title: 'Lexpress.mu',
+        url: 'https://www.lexpress.mu',
+        role: 'Front End developer',
+        tech: ['CSS', 'GulpJS', 'Drupal', 'Docker'],
+        description: 'Most popular news website of Mauritius',
+        featured: true,
+        thumbnail: 'lexpressmu.png',
+        date: '2017-06-26',
+        company: 'La Sentinelle',
+        color: 'blue',
+        icon: 'code'
+    },
+    {
+        title: 'Lexpress Culture | lexpress',
+        url: 'https://culture.lexpress.mu/',
         role: 'Front End developer',
         tech: ['CSS Grid techniques', 'VueJS', 'Golang'],
-        description: 'TV Guide for all Mauritius channels at L\'express Maurice',
+        description: 'Events and entertainment happening in Mauritius',
         featured: true,
-        thumbnail: 'tvguide.png',
-        date: '2020-03-10',
+        thumbnail: 'lexpress-culture.png',
+        date: '2019-03-10',
         company: 'LSL digital',
         color: 'turquoise',
         icon: 'code'
@@ -25,19 +51,7 @@ const projects = [
         color: 'orange',
         icon: 'code'
     },
-    {
-        title: 'LSL Digital website',
-        url: 'https://www.lsl.digital/',
-        role: 'Front End developer',
-        tech: ['VueJS', 'SASS', 'VueX'],
-        description: 'LSL Digital website overall background and mainly focused on their services & solutions',
-        featured: true,
-        thumbnail: 'lsldigital.png',
-        date: '2019-09-02',
-        company: 'Open Source',
-        color: 'black',
-        icon: 'code'
-    },
+    
     {
         title: 'Developer Conference 2019 website',
         url: 'https://2019.mscc.mu/',
@@ -103,19 +117,7 @@ const projects = [
         color: 'turquoise',
         icon: 'code'
     },
-    {
-        title: 'Lexpress.mu',
-        url: 'https://www.lexpress.mu',
-        role: 'Front End developer',
-        tech: ['CSS', 'GulpJS', 'Drupal', 'Docker'],
-        description: 'Most popular news website of Mauritius',
-        featured: true,
-        thumbnail: 'lexpressmu.png',
-        date: '2017-06-26',
-        company: 'La Sentinelle',
-        color: 'blue',
-        icon: 'code'
-    },
+
 
 ]
 

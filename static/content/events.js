@@ -1,5 +1,24 @@
 const events = [
     {
+        type: 'competition',
+        color: 'bg-purple-700',
+        title: 'Best SEO Expert in the Vanilla Islands',
+        image:
+            'best-seo-2020.jpg',
+        bg_position: "bg-center",
+        date: '2020-10-07T00:00:00.000Z',
+        name: 'SEO Competition',
+        country: 'Virtual',
+        icon: "competition.svg",
+        links: [
+            {
+                text: 'Info by Vanilla Island',
+                url:
+                    'https://www.vanilla-islands.org/en/best-seo-expert/'
+            }
+        ]
+    },
+    {
         type: 'speaker',
         color: 'bg-green-700',
         title: 'Talking about Front-End Ecosystem',
