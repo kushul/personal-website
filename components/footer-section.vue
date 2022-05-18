@@ -1,21 +1,34 @@
 <template>
   <div
-    class="container bg-background-invert text-copy-invert flex justify-center items-center mx-auto text-sm sm:py-6 py-3 mt-2 tracking-wide"
+    class="
+      container
+      bg-background-invert
+      text-copy-invert
+      flex
+      justify-center
+      items-center
+      mx-auto
+      text-sm
+      sm:py-6
+      py-3
+      mt-2
+      tracking-wide
+    "
   >
     <div class="text-copy-invert mx-4 font-bold text-sm flex text-sm tagline">
-      © 2021
+      © 2022
       <span class="sm:block hidden ml-1">| KUSHUL SOOMAREE</span>
     </div>
 
     <ul class="menu flex justify-end">
       <li class="kush-footer-item">
-        <nuxt-link :to="{name: 'blog'}">Blogs</nuxt-link>
+        <nuxt-link :to="{ name: 'blog' }">Blogs</nuxt-link>
       </li>
       <li class="kush-footer-item">
-        <nuxt-link :to="{name: 'events'}">Events</nuxt-link>
+        <nuxt-link :to="{ name: 'events' }">Events</nuxt-link>
       </li>
       <li class="kush-footer-item">
-        <nuxt-link :to="{name: 'projects'}">Projects</nuxt-link>
+        <nuxt-link :to="{ name: 'projects' }">Projects</nuxt-link>
       </li>
     </ul>
   </div>
@@ -27,9 +40,9 @@ export default {
     url: {
       get() {
         return this.$store.state.ghostUrl
-      }
-    }
-  }
+      },
+    },
+  },
 }
 </script>
 
