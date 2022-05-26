@@ -16,21 +16,31 @@
         <h3 class="text-base font-semibold">Software Engineer</h3>
       </div>
       <div class="author-title">
-        <h4
-          class="text-xl md:text-2xl lg:text-4xl leading-snug my-4"
-        >Based in Mauritius, I'm a Developer and graphic designer</h4>
+        <h4 class="text-xl md:text-2xl lg:text-4xl leading-snug my-4">
+          Based in Mauritius, I'm a Senior Developer and graphic designer
+        </h4>
       </div>
       <div class="author-summary">
         <p class="sm:text-lg text-base">
-          "Design is everywhere. From the dress you're wearing to the smartphone you're holding, it's
-          design."
+          "Design is everywhere. From the dress you're wearing to the smartphone
+          you're holding, it's design."
         </p>
       </div>
       <div class="npx-wrapper mt-4">
         Try
         <span
-          class="py-1 px-2 text-copy-primary bg-background-secondary rounded cursor-move inline-block"
-        >npx kushul_soomaree</span> on your terminal for a small resume.
+          class="
+            py-1
+            px-2
+            text-copy-primary
+            bg-background-secondary
+            rounded
+            cursor-move
+            inline-block
+          "
+          >npx kushul_soomaree</span
+        >
+        on your terminal for a small resume.
       </div>
       <div class="social-media-container">
         <SocialMedia />
@@ -43,8 +53,8 @@
 import SocialMedia from '../components/social-media'
 export default {
   components: {
-    SocialMedia
-  }
+    SocialMedia,
+  },
 }
 </script>
 

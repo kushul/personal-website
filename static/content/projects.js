@@ -1,9 +1,48 @@
 const projects = [
     {
+        title: 'Ma Vie en Couleurs',
+        url: 'https://www.mavieencouleurs.fr/',
+        role: 'Senior Front End Engineer',
+        tech: ['Drupal 9', 'JQuery', 'SwiperJS', 'SCSS'],
+        description: 'Ma vie en couleurs is the possibility of taking advantage of exceptional advantages on your favorite products, so take advantage of them: games, reduction coupons to be used either in the store of your choice, or after your shopping for reimbursement mobile, or even on your Cora loyalty card!',
+        featured: true,
+        thumbnail: 'mavieencouleurs.png',
+        date: '2021-08-13',
+        company: 'Open Source',
+        color: 'green',
+        icon: 'code'
+    },
+    {
+        title: 'Portshub',
+        url: 'https://portshub.net/',
+        role: 'Freelance Front End Developer',
+        tech: ['Drupal 9', 'SCSS', "Webpack"],
+        description: 'Portshub is specialized in online community and membership management solutions. Open Social places sharing at the heart of everything we do. Because sharing is what makes a group of individuals turn into a community. As people share their goals, their innovations, their knowledge and stories, they become a unified community that can change the world.',
+        featured: true,
+        thumbnail: 'portshub.png',
+        date: '2022-04-10',
+        company: 'Open Source',
+        color: 'turquoise',
+        icon: 'code'
+    },
+    {
+        title: 'Front-End coders Mauritius',
+        url: 'https://frontend.mu/',
+        role: 'Voluntary Front End developer',
+        tech: ['NuxtJS', 'TailwindCSS', 'SwiperJS', 'SCSS'],
+        description: 'Front-End coders Mauritius is a free meetup that\'s dedicated to all aspect of Front-End development. It occurs in general one a month at announced date and place.',
+        featured: true,
+        thumbnail: 'front-end-coders.png',
+        date: '2022-05-10',
+        company: 'Open Source',
+        color: 'blue',
+        icon: 'code'
+    },
+    {
         title: 'LSL Digital website',
         url: 'https://lsldigital.com/',
         role: 'Front End Lead',
-        tech: ['Ghost API', 'Casper'],
+        tech: ['Ghost API', 'Casper', 'TailwindCSS'],
         description: 'LSL Digital website overall background and mainly focused on their services & solutions',
         featured: true,
         thumbnail: 'lsldigital.png',
@@ -51,7 +90,7 @@ const projects = [
         color: 'orange',
         icon: 'code'
     },
-    
+
     {
         title: 'Developer Conference 2019 website',
         url: 'https://2019.mscc.mu/',
