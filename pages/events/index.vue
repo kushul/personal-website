@@ -215,7 +215,7 @@
               <div class="md:text-xl">{{ event.date | month }}</div>
               <div class="md:text-3xl">{{ event.date | year }}</div>
             </div>
-            <div class="p-4 font-normal">
+            <div class="p-4 font-normal w-full">
               <h1 class="mb-4 text-xl font-bold leading-none tracking-tight">
                 {{ event.title }}
               </h1>

@@ -1,5 +1,24 @@
 const events = [
     {
+        type: 'speaker',
+        color: 'bg-yellow-700',
+        title: 'Web Accessibility & UI/UX',
+        image:
+            'frontendmu-speaker-2022.webp',
+        bg_position: "bg-bottom",
+        date: '2022-05-14T00:00:00.000Z',
+        name: 'Frontend Meetup, Outremer telecom',
+        icon: "speaker.svg",
+        country: 'Ebene, Mauritius',
+        links: [
+            {
+                text: 'frontend.mu',
+                url:
+                    'https://frontend.mu/meetup/36'
+            }
+        ]
+    },
+    {
         type: 'jury',
         color: 'bg-yellow-700',
         title: 'Jury Webcup 2022',
@@ -12,9 +31,28 @@ const events = [
         country: 'SD Worx, Mauritius',
         links: [
             {
-                text: 'Maurice Info ',
+                text: 'Maurice Info',
                 url:
                     'https://www.maurice-info.mu/2022-06-09-photos-la-webcup-maurice-2022-remportee-par-lequipe-synced-place.html'
+            }
+        ]
+    },
+    {
+        type: 'speaker',
+        color: 'bg-yellow-700',
+        title: 'Web Accessibility & UI/UX',
+        image:
+            'webcup-conf-2022.png',
+        bg_position: "bg-bottom",
+        date: '2022-05-14T00:00:00.000Z',
+        name: 'Webcup Conference',
+        icon: "speaker.svg",
+        country: 'Indian Ocean',
+        links: [
+            {
+                text: 'LinkedIn post',
+                url:
+                    'https://www.linkedin.com/posts/association-webcup_tech-bootcamp-activity-6927918199929729025-cB6r?utm_source=share&utm_medium=member_desktop'
             }
         ]
     },
