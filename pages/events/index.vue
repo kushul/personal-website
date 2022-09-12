@@ -1,15 +1,29 @@
 <template>
   <div class="main-events-container container mx-auto mb-8">
     <h1 class="page-title">Events Participation</h1>
-    <h3
-      class="page-subtitle"
-    >“On our own, we are marshmallows and dried spaghetti, but together we can become something bigger.” “New and stirring things are belittled because if they are not belittled the humiliating question arises 'Why then are you not taking part in them?”</h3>
+    <h3 class="page-subtitle">
+      “On our own, we are marshmallows and dried spaghetti, but together we can
+      become something bigger.” “New and stirring things are belittled because
+      if they are not belittled the humiliating question arises 'Why then are
+      you not taking part in them?”
+    </h3>
     <div class="mb-6 chips-container">
       <div
         v-for="(item, index) in eventType"
         :key="index"
         :class="[item.bg, item.text]"
-        class="select-chip inline-flex cursor-pointer sm:mr-4 sm:mb-4 text-xs items-center font-bold leading-sm uppercase rounded-full"
+        class="
+          select-chip
+          inline-flex
+          cursor-pointer
+          sm:mr-4 sm:mb-4
+          text-xs
+          items-center
+          font-bold
+          leading-sm
+          uppercase
+          rounded-full
+        "
       >
         <input
           class="hidden"
@@ -19,7 +33,10 @@
           v-model="eventSelected"
           :value="item.name"
         />
-        <label :for="item.name" class="inline-flex items-center px-3 py-1 cursor-pointer">
+        <label
+          :for="item.name"
+          class="inline-flex items-center px-3 py-1 cursor-pointer"
+        >
           <svg
             width="90"
             height="96"
@@ -141,38 +158,67 @@
             <path
               d="M19.0002 17.3C23.6002 17.3 27.3002 13.5 27.3002 8.9C27.3002 4.3 23.6002 0.5 19.0002 0.5C14.4002 0.5 10.7002 4.3 10.7002 8.9C10.7002 13.5 14.4002 17.3 19.0002 17.3Z"
             />
-            <path d="M22.6998 21.3999H15.2998L18.9998 36.9999L22.6998 21.3999Z" />
+            <path
+              d="M22.6998 21.3999H15.2998L18.9998 36.9999L22.6998 21.3999Z"
+            />
             <path
               d="M27.6 21.3998H23.8L19.8 38.0998H22.9C23.4 38.0998 23.9 38.4998 23.9 39.0998V44.6998C23.9 45.1998 23.5 45.6998 22.9 45.6998H15.2C14.7 45.6998 14.2 45.2998 14.2 44.6998V38.9998C14.2 38.4998 14.6 37.9998 15.2 37.9998H18.3L14.3 21.2998H10.5C5 21.2998 0.5 24.7998 0.5 30.3998V53.6998C0.5 55.5998 2 57.0998 3.9 57.0998C5.8 57.0998 7.3 55.5998 7.3 53.6998V33.6998H9C9 33.6998 9 87.0998 9 90.7998C9 93.2998 11 95.3998 13.6 95.3998C16.1 95.3998 18.2 93.2998 18.2 90.7998V60.2998H20.1V90.8998C20.1 93.3998 22.2 95.4998 24.7 95.4998C27.2 95.4998 29.3 93.3998 29.3 90.8998V33.7998H31.1V53.7998C31.1 55.6998 32.6 57.1998 34.5 57.1998C36.4 57.1998 37.9 55.6998 37.9 53.7998V30.3998C37.6 24.8998 33.1 21.3998 27.6 21.3998Z"
             />
           </svg>
-          {{item.name}}
+          {{ item.name }}
         </label>
       </div>
     </div>
-    <transition-group mode="out-in" class="events-container" name="fade" tag="div">
+    <transition-group
+      mode="out-in"
+      class="events-container"
+      name="fade"
+      tag="div"
+    >
       <div
         v-for="(event, index) in retrieveEvents"
         :key="index + 0"
-        class="event-wrapper bg-background-secondary text-copy-primary flex flex-col shadow-2xl"
+        class="
+          event-wrapper
+          bg-background-secondary
+          text-copy-primary
+          flex flex-col
+          shadow-2xl
+        "
       >
         <div class="glass"></div>
         <div class="content h-full">
           <div
             :class="event.bg_position"
             class="w-full h-40 bg-cover rounded-t"
-            :style="{backgroundImage: 'url('+require('@/assets/images/events/'+ event.image)+')'}"
+            :style="{
+              backgroundImage:
+                'url(' + require('@/assets/images/events/' + event.image) + ')',
+            }"
           ></div>
           <div class="flex event-content-wrapper flex-col w-full md:flex-row">
             <div
-              class="flex bg-gray-900 text-white flex-row justify-around p-4 font-bold leading-none uppercase md:flex-col md:items-center md:justify-center"
+              class="
+                flex
+                bg-gray-900
+                text-white
+                flex-row
+                justify-around
+                p-4
+                font-bold
+                leading-none
+                uppercase
+                md:flex-col md:items-center md:justify-center
+              "
             >
               <div class="md:text-lg">{{ event.date | day }}</div>
               <div class="md:text-xl">{{ event.date | month }}</div>
               <div class="md:text-3xl">{{ event.date | year }}</div>
             </div>
             <div class="p-4 font-normal">
-              <h1 class="mb-4 text-xl font-bold leading-none tracking-tight">{{ event.title }}</h1>
+              <h1 class="mb-4 text-xl font-bold leading-none tracking-tight">
+                {{ event.title }}
+              </h1>
 
               <div class="flex items-center mt-2">
                 <svg
@@ -272,7 +318,11 @@
                 v-for="(link, index) in event.links"
                 :key="index"
               >
-                <a :href="link.url" target="_blank" class="link flex items-center w-3/4">
+                <a
+                  :href="link.url"
+                  target="_blank"
+                  class="link flex items-center w-3/4"
+                >
                   <span class="border-b-2 mr-2">{{ link.text }}</span>
                   <svg
                     width="90"
@@ -338,29 +388,29 @@ export default {
         {
           name: 'show all',
           bg: 'bg-red-200',
-          text: 'text-red-700'
+          text: 'text-red-700',
         },
         {
           name: 'competition',
           bg: 'bg-pink-200',
-          text: 'text-pink-700'
+          text: 'text-pink-700',
         },
         {
           name: 'speaker',
           bg: 'bg-purple-200',
-          text: 'text-purple-700'
+          text: 'text-purple-700',
         },
-        // {
-        //   name: 'jury',
-        //   bg: 'bg-yellow-200',
-        //   text: 'text-yellow-700'
-        // },
+        {
+          name: 'jury',
+          bg: 'bg-yellow-200',
+          text: 'text-yellow-700',
+        },
         {
           name: 'attendee',
           bg: 'bg-green-200',
-          text: 'text-green-700'
-        }
-      ]
+          text: 'text-green-700',
+        },
+      ],
     }
   },
   methods: {
@@ -369,39 +419,39 @@ export default {
         const result = require(`~/assets/images/icon/${name}`)
         return result
       }
-    }
+    },
   },
   computed: {
     retrieveEvents() {
       const event = this.events.filter(
-        event => event.type == this.eventSelected
+        (event) => event.type == this.eventSelected
       )
       return event[0] ? event : this.events
-    }
+    },
   },
   filters: {
     day(date) {
       var options = {
         day: 'numeric',
-        timeZone: 'Indian/Mauritius'
+        timeZone: 'Indian/Mauritius',
       }
       return new Date(date).toLocaleDateString('en', options)
     },
     month(date) {
       var options = {
         month: 'short',
-        timeZone: 'Indian/Mauritius'
+        timeZone: 'Indian/Mauritius',
       }
       return new Date(date).toLocaleDateString('en', options)
     },
     year(date) {
       var options = {
         year: 'numeric',
-        timeZone: 'Indian/Mauritius'
+        timeZone: 'Indian/Mauritius',
       }
       return new Date(date).toLocaleDateString('en', options)
-    }
-  }
+    },
+  },
 }
 </script>
 

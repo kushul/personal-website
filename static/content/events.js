@@ -1,5 +1,43 @@
 const events = [
     {
+        type: 'jury',
+        color: 'bg-yellow-700',
+        title: 'Jury Webcup 2022',
+        image:
+            'webcup-2022.png',
+        bg_position: "bg-center",
+        date: '2022-05-14T00:00:00.000Z',
+        name: 'Webcup Maurice',
+        icon: "jury.svg",
+        country: 'SD Worx, Mauritius',
+        links: [
+            {
+                text: 'Maurice Info ',
+                url:
+                    'https://www.maurice-info.mu/2022-06-09-photos-la-webcup-maurice-2022-remportee-par-lequipe-synced-place.html'
+            }
+        ]
+    },
+    {
+        type: 'jury',
+        color: 'bg-yellow-700',
+        title: 'Jury Digicup 2022',
+        image:
+            'digicup-2022.jpg',
+        bg_position: "bg-center",
+        date: '2022-04-23T00:00:00.000Z',
+        name: 'Digicup Maurice',
+        icon: "jury.svg",
+        country: 'SD Worx, Mauritius',
+        links: [
+            {
+                text: 'Video on fb',
+                url:
+                    'https://ne-np.facebook.com/DigiCup.Mu/videos/jury-panel-of-digicup-2022/389544979730927/'
+            }
+        ]
+    },
+    {
         type: 'competition',
         color: 'bg-purple-700',
         title: 'Best SEO Expert in the Vanilla Islands',

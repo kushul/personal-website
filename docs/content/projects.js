@@ -29,7 +29,7 @@ const projects = [
         title: 'Front-End coders Mauritius',
         url: 'https://frontend.mu/',
         role: 'Voluntary Front End developer',
-        tech: ['NuxtJS', 'TailwindCSS', 'SwiperJS', 'SCSS'],
+        tech: ['NuxtJS', 'TailwindCSS', 'SCSS'],
         description: 'Front-End coders Mauritius is a free meetup that\'s dedicated to all aspect of Front-End development. It occurs in general one a month at announced date and place.',
         featured: true,
         thumbnail: 'front-end-coders.png',
