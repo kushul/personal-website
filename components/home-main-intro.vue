@@ -115,7 +115,7 @@ export default {
   }
 }
 
-@-webkit-keyframes flash {
+@keyframes flash {
   0% {
     text-shadow: 0 0 6px #fff;
   }

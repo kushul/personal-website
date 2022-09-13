@@ -174,6 +174,11 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      animation-name: popUp;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      animation-timing-function: ease-in;
 
       &:first-child {
         margin-left: 0;
@@ -182,59 +187,79 @@
   }
 }
 
-.social-items li a:hover.facebook {
-  border: 5px solid #3b5998;
-  box-shadow: 0 0 15px #3b5998;
-  transition: all 0.5s ease;
+@keyframes popUp {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(30px);
+  }
+  100% {
+    transform: translateY(30px);
+  }
 }
 
-.social-items li a:hover.facebook svg {
-  transition: all 0.5s ease;
-  fill: #3b5998;
-}
+.social-items li a {
+  &.facebook {
+    &:hover {
+      border: 5px solid #3b5998;
+      box-shadow: 0 0 15px #3b5998;
+      transition: all 0.5s ease;
+      svg {
+        fill: #3b5998;
+      }
+    }
+  }
+  &.instagram {
+    animation-delay: 0.2s;
+    &:hover {
+      border: 5px solid #bc2a8d;
+      box-shadow: 0 0 15px #bc2a8d;
+      transition: all 0.5s ease;
+      svg {
+        fill: #bc2a8d;
+      }
+    }
+  }
+  &.twitter {
+    animation-delay: 0.4s;
+    &:hover {
+      border: 5px solid #00aced;
+      box-shadow: 0 0 15px #00aced;
+      transition: all 0.5s ease;
+      svg {
+        fill: #00aced;
+      }
+    }
+  }
+  &.email {
+    animation-delay: 0.6s;
+    &:hover {
+      border: 5px solid #dd4b39;
+      box-shadow: 0 0 15px #dd4b39;
+      transition: all 0.5s ease;
+      svg {
+        fill: #dd4b39;
+      }
+    }
+  }
 
-.social-items li a:hover.instagram {
-  border: 5px solid #bc2a8d;
-  box-shadow: 0 0 15px #bc2a8d;
-  transition: all 0.5s ease;
-}
-
-.social-items li a:hover.instagram svg {
-  transition: all 0.5s ease;
-  fill: #bc2a8d;
-}
-
-.social-items li a:hover.twitter {
-  border: 5px solid #00aced;
-  box-shadow: 0 0 15px #00aced;
-  transition: all 0.5s ease;
-}
-
-.social-items li a:hover.twitter svg {
-  transition: all 0.5s ease;
-  fill: #00aced;
-}
-
-.social-items li a:hover.email {
-  border: 5px solid #dd4b39;
-  box-shadow: 0 0 15px #dd4b39;
-  transition: all 0.5s ease;
-}
-
-.social-items li a:hover.email svg {
-  transition: all 0.5s ease;
-  fill: #dd4b39;
-}
-
-.social-items li a:hover.linkedIn {
-  border: 5px solid #0073b1;
-  box-shadow: 0 0 15px #0073b1;
-  transition: all 0.5s ease;
-}
-
-.social-items li a:hover.linkedIn svg {
-  transition: all 0.5s ease;
-  fill: #0073b1;
+  &.linkedIn {
+    animation-delay: 0.8s;
+    &:hover {
+      border: 5px solid #0073b1;
+      box-shadow: 0 0 15px #0073b1;
+      transition: all 0.5s ease;
+      svg {
+        fill: #0073b1;
+      }
+    }
+  }
+  &:hover {
+    svg {
+      transition: all 0.5s ease;
+    }
+  }
 }
 
 @media (max-width: 1024px) {
