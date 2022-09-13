@@ -2,7 +2,11 @@
   <div class="social-media-wrapper">
     <ul class="social-items">
       <li>
-        <a href="https://www.facebook.com/kushul.soomaree" target="_blank" class="facebook">
+        <a
+          href="https://www.facebook.com/kushul.soomaree"
+          target="_blank"
+          class="facebook"
+        >
           <svg
             version="1.1"
             id="Capa_1"
@@ -12,7 +16,7 @@
             y="0px"
             class="h-4 w-4 sm:w-6 sm:h-6 fill-current"
             viewBox="0 0 155.139 155.139"
-            style="enable-background:new 0 0 155.139 155.139;"
+            style="enable-background: new 0 0 155.139 155.139"
             xml:space="preserve"
           >
             <g>
@@ -27,7 +31,11 @@
         </a>
       </li>
       <li>
-        <a href="https://www.instagram.com/kushul_/" target="_blank" class="instagram">
+        <a
+          href="https://www.instagram.com/kushul_/"
+          target="_blank"
+          class="instagram"
+        >
           <svg
             height="511pt"
             viewBox="0 0 511 511.9"
@@ -48,7 +56,11 @@
         </a>
       </li>
       <li>
-        <a href="https://twitter.com/kushul_soomaree" target="_blank" class="twitter">
+        <a
+          href="https://twitter.com/kushul_soomaree?t=TS9mU8JL3-3GzukjlP-itg&s=09"
+          target="_blank"
+          class="twitter"
+        >
           <svg
             version="1.1"
             id="Capa_1"
@@ -59,7 +71,7 @@
             width="543.684px"
             height="543.684px"
             viewBox="0 0 543.684 543.684"
-            style="enable-background:new 0 0 543.684 543.684;"
+            style="enable-background: new 0 0 543.684 543.684"
             xml:space="preserve"
             class="h-4 w-4 sm:w-6 sm:h-6 fill-current"
           >
@@ -88,7 +100,11 @@
         </a>
       </li>
       <li>
-        <a href="mailto: kushul.soomaree@gmail.com" target="_blank" class="email">
+        <a
+          href="mailto: kushul.soomaree@gmail.com"
+          target="_blank"
+          class="email"
+        >
           <svg
             version="1.1"
             id="Capa_1"
@@ -98,7 +114,7 @@
             x="0px"
             y="0px"
             viewBox="0 0 382.117 382.117"
-            style="enable-background:new 0 0 382.117 382.117;"
+            style="enable-background: new 0 0 382.117 382.117"
             xml:space="preserve"
           >
             <path

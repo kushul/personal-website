@@ -3,8 +3,8 @@
     <div class="left-part-wrapper">
       <div class="profile-image-wrapper">
         <div class="name-wrapper">
-          <h1>Kushul</h1>
-          <h1>Soomaree</h1>
+          <h1 data-text="kushul">Kushul</h1>
+          <h1 data-text="Soomaree">Soomaree</h1>
         </div>
         <div class="image-wrapper">
           <img src="../assets/images/kush.png" alt="Kushul Soomaree" />
@@ -17,7 +17,8 @@
       </div>
       <div class="author-title">
         <h4 class="text-xl md:text-2xl lg:text-4xl leading-snug my-4">
-          Based in Mauritius, I'm a Senior Developer and graphic designer
+          Based in Mauritius, I'm a Senior Developer, graphic designer &
+          certified Trainer
         </h4>
       </div>
       <div class="author-summary">
@@ -92,10 +93,61 @@ export default {
     font-weight: 900;
     line-height: 100px;
     font-family: var(--font-oswald);
+    -webkit-animation: flash 0.35s infinite;
+    animation: flash 0.35s infinite;
 
     &:last-child {
       margin-left: 50px;
     }
+
+    // &::before {
+    //   content: attr(data-text);
+    //   position: absolute;
+    //   background: (var(--green));
+    //   -webkit-background-clip: text;
+    //   color: transparent;
+    //   background-size: 50% 90%;
+    //   line-height: 0.9;
+    //   clip-path: ellipse(120px 120px at -2.54% -9.25%);
+    //   animation: swing 5s infinite;
+    //   animation-direction: alternate;
+    // }
+  }
+}
+
+@-webkit-keyframes flash {
+  0% {
+    text-shadow: 0 0 6px #fff;
+  }
+  100% {
+    text-shadow: 0 0 0px #000;
+  }
+}
+
+@keyframes swing {
+  0% {
+    -webkit-clip-path: ellipse(120px 120px at -2.54% -9.25%);
+    clip-path: ellipse(120px 120px at -2.54% -9.25%);
+  }
+  50% {
+    -webkit-clip-path: ellipse(120px 120px at 49.66% 64.36%);
+    clip-path: ellipse(120px 120px at 49.66% 64.36%);
+  }
+  100% {
+    -webkit-clip-path: ellipse(120px 120px at 102.62% -1.61%);
+    clip-path: ellipse(120px 120px at 102.62% -1.61%);
+  }
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 200px;
+  }
+  100% {
+    background-position: 350px;
   }
 }
 
@@ -115,6 +167,24 @@ export default {
 
 .social-media-container {
   margin: 40px 0;
+}
+
+.author-title {
+  h4 {
+    background: linear-gradient(
+      to right,
+      var(--text-copy-primary) 0,
+      var(--green) 10%,
+      var(--text-copy-primary) 20%
+    );
+    background-position: 0;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s infinite linear;
+    animation-fill-mode: forwards;
+    -webkit-text-size-adjust: none;
+    text-decoration: none;
+  }
 }
 
 .author-job h3 {

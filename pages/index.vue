@@ -3,11 +3,17 @@
     <MainIntro />
     <div class="bg-background-secondary pb-16">
       <h1 class="title">Skills & Expertise</h1>
-      <h2 class="subtitle">A list of skills and technology i have been experienced.</h2>
+      <h2 class="subtitle">
+        A list of skills and technology i have been experienced.
+      </h2>
       <div class="main-tagline-container container mx-auto">
         <div
           class="tagline-wrapper"
-          v-bind:style="{ 'grid-area': tagline.gridarea, 'justify-content': tagline.justify, 'align-items': tagline.align }"
+          v-bind:style="{
+            'grid-area': tagline.gridarea,
+            'justify-content': tagline.justify,
+            'align-items': tagline.align,
+          }"
           v-for="(tagline, index) in taglines"
           :key="index"
         >
@@ -16,9 +22,24 @@
             :class="tagline.color"
           >
             <h2
-              class="font-serif tracking-normal leading-none text-copy-primary md:text-xl sm:text-sm text-xs text-fade font-bold"
-            >{{tagline.text}}</h2>
-            <img class="md:w-20 sm:w-12 w-8" :src="findImage(tagline.image)" alt="creative" />
+              class="
+                font-serif
+                tracking-normal
+                leading-none
+                text-copy-primary
+                md:text-xl
+                sm:text-sm
+                text-xs text-fade
+                font-bold
+              "
+            >
+              {{ tagline.text }}
+            </h2>
+            <img
+              class="md:w-20 sm:w-12 w-8"
+              :src="findImage(tagline.image)"
+              alt="creative"
+            />
           </div>
         </div>
         <Main-image />
@@ -56,40 +77,40 @@ export default {
       page: pageginationPageNumber,
       include: 'tags,authors',
       fields: postIndexFields,
-      filter: 'featured: true'
+      filter: 'featured: true',
     })
 
     return {
       indexPosts: posts,
-      indexPagination: posts.meta.pagination
+      indexPagination: posts.meta.pagination,
     }
   },
   data() {
     return {
       taglines: [
         {
-          text: 'Creative',
-          image: 'creative.svg',
+          text: 'A11Y',
+          image: 'accessibility.svg',
           gridarea: 'a',
           justify: 'flex-end',
           align: 'flex-end',
-          color: 'bg-red-500'
+          color: 'bg-indigo-500',
         },
         {
-          text: 'Problem solving',
-          image: 'problem_solving.svg',
+          text: 'Drupal9',
+          image: 'drupal.svg',
           gridarea: 'b',
           justify: 'center',
           align: 'flex-end',
-          color: 'bg-teal-500'
+          color: 'bg-blue-500',
         },
         {
-          text: 'Design',
+          text: 'UI/UX',
           image: 'design.svg',
           gridarea: 'c',
           justify: 'flex-start',
           align: 'flex-end',
-          color: 'bg-purple-500'
+          color: 'bg-purple-500',
         },
         {
           text: 'Git',
@@ -97,7 +118,7 @@ export default {
           gridarea: 'd',
           justify: 'flex-end',
           align: 'center',
-          color: 'bg-indigo-500'
+          color: 'bg-red-500',
         },
         {
           text: 'Responsive',
@@ -105,7 +126,7 @@ export default {
           gridarea: 'f',
           justify: 'flex-start',
           align: 'center',
-          color: 'bg-pink-500'
+          color: 'bg-pink-500',
         },
         {
           text: 'Javascript',
@@ -113,7 +134,7 @@ export default {
           gridarea: 'h',
           justify: 'flex-end',
           align: 'flex-start',
-          color: 'bg-yellow-600'
+          color: 'bg-yellow-600',
         },
         {
           text: 'Vuejs',
@@ -121,7 +142,7 @@ export default {
           gridarea: 'i',
           justify: 'center',
           align: 'flex-start',
-          color: 'bg-green-500'
+          color: 'bg-green-500',
         },
         {
           text: 'CSS',
@@ -129,9 +150,9 @@ export default {
           gridarea: 'j',
           justify: 'flex-start',
           align: 'flex-start',
-          color: 'bg-orange-500'
-        }
-      ]
+          color: 'bg-orange-500',
+        },
+      ],
     }
   },
   components: {
@@ -139,7 +160,7 @@ export default {
     MainImage,
     MainIntro,
     Timeline,
-    Map
+    Map,
   },
   methods: {
     findImage(name) {
@@ -147,8 +168,8 @@ export default {
         const result = require(`~/assets/images/icon/${name}`)
         return result
       }
-    }
-  }
+    },
+  },
 }
 </script>
 
