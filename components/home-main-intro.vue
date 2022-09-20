@@ -93,8 +93,7 @@ export default {
     font-weight: 900;
     line-height: 100px;
     font-family: var(--font-oswald);
-    -webkit-animation: flash 0.35s infinite;
-    animation: flash 0.35s infinite;
+    animation: flash 3s infinite;
 
     &:last-child {
       margin-left: 50px;
