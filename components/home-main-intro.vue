@@ -7,7 +7,7 @@
           <h1 data-text="Soomaree">Soomaree</h1>
         </div>
         <div class="image-wrapper">
-          <img src="../assets/images/kush.png" alt="Kushul Soomaree" />
+          <img src="../assets/images/kush-illustration.png" alt="Kushul Soomaree" />
         </div>
       </div>
     </div>
@@ -230,10 +230,13 @@ export default {
     text-align: center;
   }
 
+     .name-wrapper {
+       display: none;
+     }
+
   .profile-image-wrapper {
     .image-wrapper {
       justify-content: center;
-      padding-left: 50px;
     }
   }
 }
@@ -242,12 +245,10 @@ export default {
   .home-main-intro {
     grid-gap: 0;
   }
-  .name-wrapper {
-    display: none;
-  }
 
   .profile-image-wrapper {
     .image-wrapper {
+      display: none;
       padding-left: 0;
     }
   }
