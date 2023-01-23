@@ -129,7 +129,7 @@ const events = [
             {
                 text: 'Blogpost',
                 url:
-                    'https://www.lsl.digital/blog/frontend-love-and-vuejs-amsterdam-2020'
+                    'https://kushulsoomaree.netlify.app/blog/vuejs-amsterdam-2020'
             }
 
         ]
