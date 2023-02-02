@@ -2,6 +2,25 @@ const events = [
     {
         type: 'speaker',
         color: 'bg-yellow-700',
+        title: 'Ghost theme development',
+        image:
+            'devcon-2022.jpg',
+        bg_position: "bg-center",
+        date: '2022-11-24T00:00:00.000Z',
+        name: 'Develop Conference 2022',
+        icon: "speaker.svg",
+        country: 'Caudan Art Center, Mauritius',
+        links: [
+            {
+                text: 'frontend.mu',
+                url:
+                    'https://frontend.mu/meetup/36'
+            }
+        ]
+    },
+    {
+        type: 'speaker',
+        color: 'bg-yellow-700',
         title: 'Web Accessibility & UI/UX',
         image:
             'frontendmu-speaker-2022.webp',
