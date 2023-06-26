@@ -514,14 +514,14 @@ export default {
       li {
         &.first {
           border-top: 2px solid;
-          @apply border-copy-invert;
+          // @apply border-copy-invert;
         }
 
         width: 100%;
         border-bottom: 2px solid;
         margin: 0;
 
-        @apply border-copy-invert;
+        // @apply border-copy-invert;
         a {
           height: 60px;
           display: flex;
@@ -529,7 +529,7 @@ export default {
           align-items: center;
           padding: 0;
 
-          @apply text-copy-invert;
+          // @apply text-copy-invert;
         }
       }
     }
